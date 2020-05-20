@@ -1,4 +1,0 @@
-# Google Assistant
-
-Coming soon...
-
