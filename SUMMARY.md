@@ -29,4 +29,5 @@
   * [Object methods](key-concepts/standard-library/object-methods.md)
   * [Number methods](key-concepts/standard-library/number-methods.md)
   * [Generic methods](key-concepts/standard-library/generic-methods.md)
+  * [Message formats](key-concepts/standard-library/message-formats.md)
 
