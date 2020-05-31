@@ -91,14 +91,6 @@ somestep:
   else say "Oh that's too bad!"
 ```
 
-## Limitations
-
-{% hint style="danger" %}
-The maximum theoretical size of a `say` payload is **16KB**. However, each channel will have different limitations depending on the type of component. For a Text component for example, most channels are limited to a few hundred characters for. 
-
-Please refer to each channel's official documentation to find out the practical limitations of each component.
-{% endhint %}
-
 ## Receiving messages
 
 When receiving an event from an end-user, the CSML interpreter will try to:
@@ -118,5 +110,11 @@ By default, events are only expected when:
 
 In those cases, a local variable, `event`, is made available, with the content of the user request. When no event is available, event is set to `NULL`.
 
-## 
+## ⚠️ Limitations
+
+{% hint style="danger" %}
+The maximum theoretical size of a `say` payload is **16KB**. However, each channel will have different limitations depending on the type of component. For a Text component for example, most channels are limited to a few hundred characters for. 
+
+Please refer to each channel's official documentation to find out the practical limitations of each component.
+{% endhint %}
 

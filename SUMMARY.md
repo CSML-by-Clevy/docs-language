@@ -9,9 +9,8 @@
   * [Temporary and Long-Term variables](memory/temporary-and-long-term-variables.md)
 * [Conditional Logic](conditional-logic.md)
 * [Custom Code Execution](custom-code-execution.md)
-* [Value Types](automatic-type-inference/README.md)
-  * [Literals, Objects, Arrays](automatic-type-inference/literals-objects-arrays.md)
-  * [Automatic Type Inference](automatic-type-inference/automatic-type-inference.md)
+* [Value Types](automatic-type-inference.md)
+* [Automatic Type Inference](automatic-type-inference-1.md)
 
 ## Standard Library
 

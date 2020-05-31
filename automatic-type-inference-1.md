@@ -1,6 +1,6 @@
 # Automatic Type Inference
 
-All incoming events are theoretically strings.
+All incoming events are _theoretically_ strings.
 
 The reason is simple: there is no way for a chat client to differenciate between for example a `number` type and a `string` type as this was typed into an input field or spoken to a voice interface.
 

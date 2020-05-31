@@ -55,5 +55,7 @@ Inside any given step, a number of global variables are made available to the de
 
 ## ⚠️ Limitations
 
+{% hint style="warning" %}
 Variables and memories \(of any type\) can **not be larger than 50KB**. Using data larger than 50KB in variables \(for example as the return value of a function\) may result in undefined behavior. Also, please note that messages larger than 30KB in size can not be displayed in the test webapp.
+{% endhint %}
 
