@@ -1,6 +1,8 @@
 # Macros
 
-### OneOf
+Macros are built-in functions that perform some common tasks. Below is a list of some common macros that you can use at any stage in your CSML flows.
+
+## OneOf
 
 Return one the elements of the array passed in the first argument at random.
 
@@ -10,7 +12,7 @@ Useful for randomisation of dialogue parts!
 say OneOf(["I like you", "You're awesome"])
 ```
 
-### Shuffle
+## Shuffle
 
 Given an array, return it with its elements in a random order.
 
@@ -27,7 +29,7 @@ say Question(
 )
 ```
 
-### Find
+## Find
 
 Return whether a string is contained in another string.
 
@@ -36,7 +38,7 @@ say Find("needle", in="haystack") // false
 say Find("yes", in="well yes, I like cheese") // true
 ```
 
-### Length
+## Length
 
 Return the length of a given string or array
 

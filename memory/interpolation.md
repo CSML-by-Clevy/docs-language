@@ -10,7 +10,7 @@ start:
   say "My name is {{who}}"
   say "My name is {{slim_shady}}"
 
-// Which is the same as:
+// Printing values from object properties is also possible:
 start:
   say "Hi! My name is {{eminem.what}}"
   say "My name is {{eminem.who}}"
