@@ -1,6 +1,6 @@
 # Message payloads
 
-CSML message components all have a matching message format for client use. They can be extended by adding additional properties to the `content` wrapper.
+CSML message components all have a matching message format for client use in regular `JSON`. They can be extended by adding additional properties to the `content` wrapper.
 
 ```javascript
 > Text()
