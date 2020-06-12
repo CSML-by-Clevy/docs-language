@@ -1,6 +1,10 @@
 # Message payloads
 
+## Standard message components
+
 CSML message components all have a matching message format for client use in regular `JSON`. They can be extended by adding additional properties to the `content` wrapper.
+
+### Text\(\)
 
 ```javascript
 > Text()
@@ -12,6 +16,8 @@ CSML message components all have a matching message format for client use in reg
 }
 ```
 
+### Typing\(\)
+
 ```javascript
 > Typing()
 {
@@ -22,6 +28,8 @@ CSML message components all have a matching message format for client use in reg
 }
 ```
 
+### Wait\(\)
+
 ```javascript
 > Wait()
 {
@@ -31,6 +39,8 @@ CSML message components all have a matching message format for client use in reg
   "content_type": "wait"
 }
 ```
+
+### Url\(\)
 
 ```javascript
 > Url()
@@ -44,6 +54,8 @@ CSML message components all have a matching message format for client use in reg
 }
 ```
 
+### Image\(\)
+
 ```javascript
 > Image()
 {
@@ -53,6 +65,8 @@ CSML message components all have a matching message format for client use in reg
   "content_type": "image"
 }
 ```
+
+### Audio\(\)
 
 ```javascript
 > Audio()
@@ -64,6 +78,8 @@ CSML message components all have a matching message format for client use in reg
 }
 ```
 
+### Video\(\)
+
 ```javascript
 > Video()
 {
@@ -74,6 +90,8 @@ CSML message components all have a matching message format for client use in reg
 }
 ```
 
+### File\(\)
+
 ```javascript
 > File()
 {
@@ -83,6 +101,8 @@ CSML message components all have a matching message format for client use in reg
   "content_type": "file"
 }
 ```
+
+### Button\(\)
 
 ```javascript
 > Button()
@@ -95,6 +115,8 @@ CSML message components all have a matching message format for client use in reg
 }
 ```
 
+### Payload\(\)
+
 ```javascript
 > Payload()
 {
@@ -104,6 +126,8 @@ CSML message components all have a matching message format for client use in reg
   "content_type": "payload"
 }
 ```
+
+### Question\(\)
 
 ```javascript
 > Question()
