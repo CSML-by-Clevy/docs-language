@@ -1,6 +1,8 @@
 # Keywords
 
-## goto
+## Action keywords
+
+### goto
 
 Inside a step, goto some other step. The step's memories are saved and its messages are sent right after this instruction, and before the next step is started.
 
@@ -26,26 +28,7 @@ someotherstep: /* will not be executed */
   say "hey"
 ```
 
-## if / else if / else
-
-Simple logic operators `if`, `else if` and `else`. See examples.
-
-```cpp
-// regular notation
-if (1 > 2) {
-  say "I have my doubts"
-} else if ("mi casa" == "tu casa") {
-  say "Welcome home"
-} else {
-  say "The force is strong with you"
-}
-
-// shorthand notation
-if (sky == "blue") goto beach
-else goto restaurant
-```
-
-## say
+### say
 
 Send a message to the end user.
 
@@ -53,7 +36,7 @@ Send a message to the end user.
 say "The quick brown fox jumps over the lazy dog."
 ```
 
-## hold
+### hold
 
 Wait for user input: simply `hold` the conversation in place until the user responds.
 
@@ -66,27 +49,7 @@ somestep:
   goto end
 ```
 
-## match
-
-Whether or not a variable "equals", in any way, another variable.
-
-```cpp
-do Button(
-  title = "I agree",
-  accept = ["OK", "yes", "right"]
-) as btn
-
-/* a direct click on the button will match the button */
-/* typing "yes" will match the button */
-/* typing "of course" will not match the button */
-if (event match btn) {
-  say "good"
-} else {
-  say "not good"
-}
-```
-
-## remember
+### remember
 
 Save a value to the bot's memory with the given key. It can later be retrieved \(as soon as the next step\) with `"{{memory_item}}"`.
 
@@ -106,7 +69,7 @@ remember myvar = myvar // `myvar` is now a globally-available memory
 do myvar = myvar // `myvar` will still be available globally
 ```
 
-## do
+### do
 
 Execute the following expression.
 
@@ -130,26 +93,9 @@ remember myobj = Object("key"="value")
 do myobj.missing.otherkey = 1 // all the parent properties must exist and be objects as well
 ```
 
-## as
 
-Save any value as a local variable, only available within the step. Local variables remain in memory after the step is done.
 
-```cpp
-do Button("A") as btn1
-// is equivalent to
-do btn2 = Button("B")
-
-// say and save a component at the same time
-say Question(
-  title = "Pick one",
-  buttons = [btn1, btn2] as btnlist
-) as myquestion
-
-// repeat the same question
-say myquestion
-```
-
-## use..as \(deprecated\)
+### use..as \(deprecated\)
 
 See `as` keyword.
 
@@ -161,7 +107,7 @@ use 42 as answer
 say "The answer is {{answer}}"
 ```
 
-## foreach
+### foreach
 
 Iterate over each element of an array.
 
@@ -172,7 +118,7 @@ foreach (val, index) in array {
 }
 ```
 
-## break
+### break
 
 Exit from loops early and continue the flow execution normally.
 
@@ -195,7 +141,67 @@ foreach (ls) in lightsabers {
 say "There might be even more lightsabers!"
 ```
 
-## mathematical operators
+## Other keywords
+
+### as
+
+Save any value as a local variable, only available within the step. Local variables remain in memory after the step is done.
+
+```cpp
+do Button("A") as btn1
+// is equivalent to
+do btn2 = Button("B")
+
+// say and save a component at the same time
+say Question(
+  title = "Pick one",
+  buttons = [btn1, btn2] as btnlist
+) as myquestion
+
+// repeat the same question
+say myquestion
+```
+
+### if / else if / else
+
+Simple logic operators `if`, `else if` and `else`. See examples.
+
+```cpp
+// regular notation
+if (1 > 2) {
+  say "I have my doubts"
+} else if ("mi casa" == "tu casa") {
+  say "Welcome home"
+} else {
+  say "The force is strong with you"
+}
+
+// shorthand notation
+if (sky == "blue") goto beach
+else goto restaurant
+```
+
+### match
+
+Whether or not a variable "equals", in any way, another variable.
+
+```cpp
+do Button(
+  title = "I agree",
+  accept = ["OK", "yes", "right"]
+) as btn
+
+/* a direct click on the button will match the button */
+/* typing "yes" will match the button */
+/* typing "of course" will not match the button */
+if (event match btn) {
+  say "good"
+} else {
+  say "not good"
+}
+```
+
+### mathematical operators
 
 In CSML, you can use the 4 basic mathematical operators `+`, `-`, `*` and `/`, as well as the modulo operator `%`. The regular order of operations applies.
 
