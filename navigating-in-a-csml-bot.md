@@ -18,6 +18,12 @@ otherstep:
   goto end
 ```
 
+{% hint style="info" %}
+**If, at the end of a step, the `goto end` instruction is omitted, the conversation will be closed anyway.** 
+
+In other words,`goto end`can be used to exit of a conversation early at any point, but it is implicitly added at the end of all steps if no other `goto` instruction is present.
+{% endhint %}
+
 ## Navigating between flows
 
 Similarly to navigating between steps of the same flow, you can go to the beginning of any other flow by using the `goto flow` keyword. This will trigger the `start` step of the target flow and close the current flow, so coming back to the first flow will actually go back to the beginning of that flow.
@@ -27,13 +33,18 @@ somestep:
   goto flow anotherflow
 ```
 
-## Recursive flows
+## Recursive flows \(deprecated\)
 
-When a new flow is triggered, the CSML engine will first check whether or not the user was already inside another flow. If that's the case, and if the new flow is direct \(i.e it does not stop to ask the user for any input at any time\), the last action of the previous flow will be triggered once more.
+{% hint style="danger" %}
+**The "Recursive flows" feature has been deprecated and will be removed in an upcoming version of the CSML Conversational Engine.**  
+_deprecation notice added on 2020-07-01_
+{% endhint %}
 
-This means that if for some reason in the middle of a long questionnaire, the user were to ask for a quick information, the bot would immediately return to the previous flow after giving the user the requested information.
+~~When a new flow is triggered, the CSML engine will first check whether or not the user was already inside another flow. If that's the case, and if the new flow is direct \(i.e it does not stop to ask the user for any input at any time\), the last action of the previous flow will be triggered once more.~~
 
-Below is an example of the expected behavior
+~~This means that if for some reason in the middle of a long questionnaire, the user were to ask for a quick information, the bot would immediately return to the previous flow after giving the user the requested information.~~
+
+~~Below is an example of the expected behavior~~
 
 ```text
 bot: What is your favorite color?
