@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Introduction](README.md)
+* [Installing CSML](installing-csml.md)
 * [Navigating in a CSML Bot](navigating-in-a-csml-bot.md)
 * [Sending and Receiving Messages](sending-receiving-messages.md)
 * [Message payloads](message-payloads.md)
