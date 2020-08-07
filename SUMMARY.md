@@ -12,6 +12,7 @@
 * [Custom Code Execution](custom-code-execution.md)
 * [Value Types](automatic-type-inference.md)
 * [Automatic Type Inference](automatic-type-inference-1.md)
+* [📑CSML Studio Documentation](https://docs.csml.dev/studio)
 
 ## Standard Library
 
@@ -23,8 +24,4 @@
 * [Object methods](standard-library/object-methods.md)
 * [Number methods](standard-library/number-methods.md)
 * [Generic methods](standard-library/generic-methods.md)
-
----
-
-* [CSML Studio Documentation](https://docs.csml.dev/studio)
 
