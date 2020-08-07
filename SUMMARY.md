@@ -24,3 +24,7 @@
 * [Number methods](standard-library/number-methods.md)
 * [Generic methods](standard-library/generic-methods.md)
 
+---
+
+* [CSML Studio Documentation](https://docs.csml.dev/studio)
+
