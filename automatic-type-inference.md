@@ -21,7 +21,11 @@ CSML is able to natively understand literal types \(`int`, `float`, `string`, ..
 
 You can also express booleans with `true` or  `false` .
 
-Since CSML v1.1, you can also use `\n`, `\t`, `\r` , `\` and `"` characters in strings, with proper escaping \(`\` and `"` must be preceded by a `\` while a single `\` will be ignored\).
+Since CSML v1.1, you can also use `\n`, `\t`, `\r` , `\` and `"` characters in strings, with proper escaping \(`\` and `"` must be preceded by a `\` while a single `\` will be ignored\). For example: 
+
+```cpp
+say "Hi!\n\nWe are proud to \ present this nice \"CSML v1.1\" update!"
+```
 
 ## NULL
 
