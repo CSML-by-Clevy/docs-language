@@ -21,6 +21,8 @@ CSML is able to natively understand literal types \(`int`, `float`, `string`, ..
 
 You can also express booleans with `true` or  `false` .
 
+Since CSML v1.1, you can also use `\n`, `\t`, `\r` , `\` and `"` characters in strings, with proper escaping \(`\` and `"` must be preceded by a `\` while a single `\` will be ignored\).
+
 ## NULL
 
 `NULL` is its own type. Missing values evaluate to `NULL`. The CSML interpreter will automatically parse the object with the usual dot notation `x.y.z` and detect the type of the resulting property. If one of the properties in the chain does not exist or is not an object itself, it will evaluate to `NULL`.
