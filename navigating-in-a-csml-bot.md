@@ -37,7 +37,7 @@ somestep:
 
 {% hint style="danger" %}
 **The "Recursive flows" feature has been deprecated and will be removed in an upcoming version of the CSML Conversational Engine.**  
-_deprecation notice added on 2020-07-01_
+_removed in CSML engine v1.1_
 {% endhint %}
 
 ~~When a new flow is triggered, the CSML engine will first check whether or not the user was already inside another flow. If that's the case, and if the new flow is direct \(i.e it does not stop to ask the user for any input at any time\), the last action of the previous flow will be triggered once more.~~
