@@ -33,24 +33,3 @@ somestep:
   goto flow anotherflow
 ```
 
-## Recursive flows \(deprecated\)
-
-{% hint style="danger" %}
-**The "Recursive flows" feature has been deprecated and will be removed in an upcoming version of the CSML Conversational Engine.**  
-_removed in CSML engine v1.1_
-{% endhint %}
-
-~~When a new flow is triggered, the CSML engine will first check whether or not the user was already inside another flow. If that's the case, and if the new flow is direct \(i.e it does not stop to ask the user for any input at any time\), the last action of the previous flow will be triggered once more.~~
-
-~~This means that if for some reason in the middle of a long questionnaire, the user were to ask for a quick information, the bot would immediately return to the previous flow after giving the user the requested information.~~
-
-~~Below is an example of the expected behavior~~
-
-```text
-bot: What is your favorite color?
-user: help
-bot: I'm FormBot, developed by FormCorp. I'm here to ask you to fill a form. To start a new form, type "restart".
-bot: What is your favorite color?
-...
-```
-
