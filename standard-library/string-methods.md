@@ -104,9 +104,9 @@ do val.match("r") // ["r", "r"] => yes, twice!
 do val.match_regex("[A-Z]") // ["W", "B"] => yes, and these are the letters!
 ```
 
-### .is\_number\(\)
+### .is\_number\(\), .is\_int\(\), .is\_float\(\)
 
-Return whether the given string represents a numerical value.
+Return whether the given string represents a numerical value, an int, a float.
 
 ```cpp
 string.is_number() => Boolean
@@ -117,5 +117,7 @@ do val.is_number() // false
 
 do val = "42"
 do val.is_number() // true
+do val.is_int() // true
+do val.is_float() // false
 ```
 

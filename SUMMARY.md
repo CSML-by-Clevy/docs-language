@@ -8,6 +8,7 @@
 * [Memory](memory/README.md)
   * [Using Variables in Messages](memory/interpolation.md)
   * [Temporary and Long-Term variables](memory/temporary-and-long-term-variables.md)
+* [The Event](the-event.md)
 * [Conditional Logic](conditional-logic.md)
 * [Custom Code Execution](custom-code-execution.md)
 * [Value Types](automatic-type-inference.md)

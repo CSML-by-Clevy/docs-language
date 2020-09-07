@@ -183,6 +183,10 @@ else goto restaurant
 
 ### match
 
+{% hint style="warning" %}
+This syntax is obsolete, but for backwards-compatibility reasons remains valid CSML. However, prefer using the `event.match(...)` alternative which is much more versatile.
+{% endhint %}
+
 Whether or not a variable "equals", in any way, another variable.
 
 ```cpp
@@ -194,7 +198,7 @@ do Button(
 /* a direct click on the button will match the button */
 /* typing "yes" will match the button */
 /* typing "of course" will not match the button */
-if (event match btn) {
+if (event match btn) { // Note: this is equivalent to event.match(btn)
   say "good"
 } else {
   say "not good"
