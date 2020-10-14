@@ -1,4 +1,4 @@
-# Custom Code Execution
+# External Code Execution
 
 The CSML engine is able to automatically handle the execution of any payload, any code, in any language, thanks to the built-in `Fn()` macro. With CSML Functions, you can integrate your own business logic, on your own servers, in your language of choice.
 
