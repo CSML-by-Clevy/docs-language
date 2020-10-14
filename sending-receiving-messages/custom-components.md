@@ -150,11 +150,11 @@ Each component is made of a list of params, that all have the same structure:
 
 ### **required** 
 
-is a boolean value that designate if the parameter is required.
+if set to true, will display an error when the value is not set in the flow
 
 ### **type**
 
-type can be on of the following
+describe the type of the parameter to accept
 
 * Null
 * Bool
@@ -165,7 +165,7 @@ type can be on of the following
 
 ### **default\_value**
 
-Array of '**Instruction**' that will be call if no value is given
+default value to set on the object
 
 ```cpp
   "default_value": [
@@ -173,9 +173,9 @@ Array of '**Instruction**' that will be call if no value is given
   ]
 ```
 
-**add\_value**
+### **add\_value**
 
-Array of '**Instruction**' that will be call to be added to the given value and if no value is given it will act as **default\_value**
+values to add to the object in all cases \(even if a default value is set\)
 
 ```cpp
   "add_value": [
