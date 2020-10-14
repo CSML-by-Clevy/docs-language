@@ -37,23 +37,23 @@ You can create an object by returning a JSON-like object from any function, or d
 
 ```cpp
 // Object representation
-use Object(
+do obj1 = Object(
   title = "toto",
   body = Object(
     somekey = "somevalue",
     otherkey = 123
   )
-) as obj1
+)
 
 
 // Shorthand notation
-use { 
+do obj2 = { 
   "title": "toto",
   "body": { 
     "somekey": "somevalue", 
     "otherkey": 123
   }
-} as obj2
+}
 
 say obj1.title // "toto"
 say obj2.body.otherkey // 123

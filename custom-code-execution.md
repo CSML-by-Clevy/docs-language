@@ -7,7 +7,7 @@ When used together with custom _serverless_ function runtimes \(cloud-based such
 ```cpp
 findweather:
   say "Let me query the weather in {{location}} for you..."
-  use Fn("weatherchannel", location = location) as weather
+  do weather = Fn("weatherchannel", location = location)
   say "It will be {{weather.temperature}}°C tomorrow."
 ```
 
