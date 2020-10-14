@@ -157,7 +157,7 @@ say Question(
 // JSON output
 {
     "content": {
-    "title": "Question",
+    "title": "Where is Brian",
     "buttons": [
       {
         "content_type": "button",
@@ -173,7 +173,7 @@ say Question(
       },
     ],
   },
-  "content_type": "video"
+  "content_type": "question"
 }
 ```
 
