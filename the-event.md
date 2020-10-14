@@ -2,7 +2,7 @@
 
 The `event` keyword is a special variable in CSML that contains whatever the user did last. It can be generally be used as a simple string, but it is in fact a much more complex object that contains a lot of information about what the user did.
 
-In its essence, `event` contains the [full message payload](message-payloads.md) as received by the bot. There is a type and a content. The content is an object that contains a text, a payload, a url, other objects... it can be anything, and in general, its content can be derived from the events type. However, using it as `"{{event}}"` in a string \(or simply in `say event` without any curly brace and double quote\) will behave as a string.
+In its essence, `event` contains the [full message payload](sending-receiving-messages/message-payloads.md) as received by the bot. There is a type and a content. The content is an object that contains a text, a payload, a url, other objects... it can be anything, and in general, its content can be derived from the events type. However, using it as `"{{event}}"` in a string \(or simply in `say event` without any curly brace and double quote\) will behave as a string.
 
 ## Event methods
 
