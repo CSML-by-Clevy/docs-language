@@ -49,7 +49,7 @@ fn my_double_add(x, y):
 
 ### Limitations
 
-CSML Functions are isolated form the bot and can't interact with the memory or display messages, they can only use \(do, if, foreach, return\) keywords.
+CSML native functions are isolated from the bot itself and can't interact with the memory or display messages. They have only access to non-state-binding keywords: **do**, **if**, **foreach** and **return**.
 
 ```cpp
 // Forbidden
@@ -74,7 +74,7 @@ fn my_func(a):
     return x
 ```
 
-## Reusing functions across flows
+## Importing Functions From Other Flows
 
 Functions are by default attached to the flow where they are written. However, you can import functions from other flows to reuse them elsewhere!
 
