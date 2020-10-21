@@ -121,3 +121,17 @@ do val.is_int() // true
 do val.is_float() // false
 ```
 
+### .split\(String\)
+
+Split a string by a given separator and return an array containing all elements in order. The separator can be a single or multiple characters. If the separator can not be found in the string, the returned array will only contain the original string.
+
+```cpp
+string.split(String) => Array[String]
+
+// example
+do val = "this is a long string"
+do val.split(" ") // ["this", "is", "a", "long", "string"]
+do val.split("is") // ["th", " ", " a long string"]
+do val.split("camembert") // ["this is a long string"]
+```
+
