@@ -21,7 +21,7 @@ Especially useful in questions to randomize the available options!
 ```cpp
 do btn1 = Button("Blue")
 do btn2 = Button("Red")
-do btns = huffle([btn1, btn2])
+do btns = Shuffle([btn1, btn2])
 
 say Question(
   title = "Select a pill",
