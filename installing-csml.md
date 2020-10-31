@@ -18,9 +18,13 @@ To run on your own machine, you will need a way to run the engine \(CSML comes w
 
 We provide an easy-to-use docker image to run CSML on your own computer. To get started, follow the instructions [on this repository](https://github.com/CSML-by-Clevy/csml-engine-docker).
 
+### Using a pre-built CSML Engine binary
+
+We provide builds for macOS and linux \(arm64\) for every new version of the CSML engine. You can find them on the releases page of the [CSML Engine github repository](https://github.com/CSML-by-Clevy/csml-engine). For the latest available version, visit [https://github.com/CSML-by-Clevy/csml-engine/releases/latest](https://github.com/CSML-by-Clevy/csml-engine/releases/latest).
+
 ### Compile From Source
 
-CSML is written in Rust. You can find the source code of the CSML interpreter and engine on [this github repo](https://github.com/CSML-by-Clevy/csml-engine), and compile it from source.
+CSML is written in Rust. You can find the source code of the CSML interpreter and engine on [this github repository](https://github.com/CSML-by-Clevy/csml-engine), and compile it from source as per the instructions.
 
 ## 
 

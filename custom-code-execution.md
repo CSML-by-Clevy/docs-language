@@ -2,7 +2,7 @@
 
 The CSML engine is able to automatically handle the execution of any payload, any code, in any language, thanks to the built-in `Fn()` macro. With CSML Functions, you can integrate your own business logic, on your own servers, in your language of choice.
 
-When used together with custom _serverless_ function runtimes \(cloud-based such as [AWS Lambda](https://aws.amazon.com/fr/lambda/features/), [Azure Functions](https://azure.microsoft.com/fr-fr/services/functions/), [Google Cloud Functions](https://cloud.google.com/functions/docs/)\), or on-premise with [FnProject](https://fnproject.io/), [OpenFaas](https://docs.openfaas.com/) or [OpenWhisk](https://openwhisk.apache.org/)\), CSML Functions are a good way to execute custom business logic outside of the context of the conversation on the cheap.
+When used together with custom _serverless_ function runtimes \(cloud-based such as [AWS Lambda](https://aws.amazon.com/fr/lambda/features/), [Azure Functions](https://azure.microsoft.com/fr-fr/services/functions/), [Google Cloud Functions](https://cloud.google.com/functions/docs/)\), or on-premise with [FnProject](https://fnproject.io/), [OpenFaas](https://docs.openfaas.com/) or [OpenWhisk](https://openwhisk.apache.org/)\), CSML Functions are a good way to execute custom business logic outside of the context of the conversation.
 
 ```cpp
 findweather:
@@ -17,7 +17,7 @@ When using the [CSML Studio](https://studio.csml.dev/auth/register), the heavy s
 
 CSML Studio also comes with [many ready-to-use integrations](https://www.csml.dev/integrations.html) that are installable in one-click.
 
-## Executing Fn calls
+## Executing `Fn` calls
 
 To execute external functions in any programming language when provided a `fn_endpoint`.
 

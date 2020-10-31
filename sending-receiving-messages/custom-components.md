@@ -211,10 +211,10 @@ If you are making a specialized chatbot for a specific channel, consider using c
 
 ## How to use Custom Message Components
 
-There are two ways to inject your own custom components in the CSML Engine and use them in your flows.
+There are two ways to import your own custom components in the CSML Engine and use them in your flows.
 
-* as **native components** by saving your all your components in files in a given directory, and set the COMPONENTS\_DIR environment variable in your [CSML Engine](https://github.com/CSML-by-Clevy/csml-engine),
-* as **local** **components** by adding a list of custom components to your chatbot's configuration when calling the engine
+* as **native components** by saving your all your custom component files in files in a given directory, and set the COMPONENTS\_DIR environment variable in your [CSML Engine](https://github.com/CSML-by-Clevy/csml-engine). In that case, the name of the component will be the name of the file \(without the extension\).
+* as **local** **components** by adding a list of custom components to your chatbot's configuration when calling the engine. In that case, you should add a `custom_components` parameter to your bot description with an array of key/value objects where the key is the name of the component and the value its definition.
 
 Native components and local components behave exactly as standard components. The only difference is that local components are used with a prefix  \(`Component.MyComponent`\) in your flows, whereas native components can be called directly \(`MyComponent`\). This allows you to define different components per bot for the same engine instance, while being able to use common components across all your chatbots. Similarly, local components are easier to share with other users of your chatbots as they can be packaged together.
 
