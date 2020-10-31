@@ -191,7 +191,7 @@ values to add to the object in all cases \(even if a default value is set\)
 
 ## Why Use Custom Components?
 
-In some cases, you may want to specialize your chatbot for one specific channel, which has some complex formats available that you want to make easier to use. For example, CSML Studio has a `MessengerQuickReply` component, which is a quicker way to create quick replies for Messenger. The drawback is that your chatbot then becomes specialized for Messenger as there are no channel adapters for other channels: `MessengerQuickReply` will only work on Messenger.
+In some cases, you may want to specialize your chatbot for one specific channel, which has some complex formats available that you want to make easier to use. For example, CSML Studio has a `QuickReply` custom component, which is a quicker way to create quick replies, which are features of Messenger, Workplace Chat and the Webapp channels.
 
 ```cpp
 say MessengerQuickReply(
