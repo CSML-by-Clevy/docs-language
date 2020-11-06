@@ -111,7 +111,7 @@ The `\` \(backslash\) character has a special meaning. For technical reasons, in
 
 This Python documentation explains why it especially matters in Regex syntax to escape backslashes: [https://docs.python.org/2/howto/regex.html\#the-backslash-plague](https://docs.python.org/2/howto/regex.html#the-backslash-plague)
 
-We follow this nomenclature for CSML Regex handling, so a single Regex backslash must be written as a `"\\"` string, and an escaped backslash \(that behaves as a real `"\"` string character\) must in fact be escaped twice, once for being in a string, and once for being in a Regex: you have to write `"\\\\"` to result in the Regex syntax `\\`.
+We follow this nomenclature for CSML Regex handling, so a single Regex backslash must be written as a `"\\"` string, and an escaped backslash \(that behaves as a literal `"\"` string character\) must in fact be escaped twice, once for being in a string, and once for being in a Regex: you have to write `"\\\\"` to result in the Regex syntax `\\`which in turn matches the literal `"\"` string.
 
 In a future release of CSML we might introduce a "raw string" method to bypass this limitation.
 {% endhint %}
