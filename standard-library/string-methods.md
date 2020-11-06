@@ -107,13 +107,13 @@ do val.match_regex("[A-Z]") // ["W", "B"] => yes, and these are the letters!
 {% hint style="info" %}
 **About \_regex methods:**
 
-In Regex, the `\` character has a special meaning by itself. However, for technical reasons, in all other strings, it must be properly escaped to be used as a special character. For example, if you mean to write the exact string `\n` you must in fact write `\\n`, otherwise `\n` is interpreted a line break.
+The `\` \(backslash\) character has a special meaning. For technical reasons, in all strings, it must be properly escaped to be used as a special character. For example, if you mean to write the exact string `\n` you must in fact write `\\n`, otherwise `\n` is interpreted a line break.
 
-This documentation explains why it especially matters in Regex syntax to escape backslashes: [https://docs.python.org/2/howto/regex.html\#the-backslash-plague](https://docs.python.org/2/howto/regex.html#the-backslash-plague)
+This Python documentation explains why it especially matters in Regex syntax to escape backslashes: [https://docs.python.org/2/howto/regex.html\#the-backslash-plague](https://docs.python.org/2/howto/regex.html#the-backslash-plague)
 
 We follow this nomenclature for CSML Regex handling, so a single Regex backslash must be written as a `"\\"` string, and an escaped backslash \(that behaves as a real `"\"` string character\) must in fact be escaped twice, once for being in a string, and once for being in a Regex: you have to write `"\\\\"` to result in the Regex syntax `\\`.
 
-In a future release of CSML we might introduce a "raw string" method to bypass this limitation. In the meantime,
+In a future release of CSML we might introduce a "raw string" method to bypass this limitation.
 {% endhint %}
 
 ### .is\_number\(\), .is\_int\(\), .is\_float\(\)
