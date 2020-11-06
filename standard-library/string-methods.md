@@ -107,7 +107,7 @@ do val.match_regex("[A-Z]") // ["W", "B"] => yes, and these are the letters!
 {% hint style="info" %}
 **About \_regex methods:**
 
-The `\` \(backslash\) character has a special meaning. For technical reasons, in all strings, it must be properly escaped to avoid being interpreted as a special character. For example, if you mean to write the exact string `\n` you must in fact write `\\n`, otherwise `\n` is interpreted a line break.
+The `\` \(backslash\) character has a special meaning. For technical reasons, in all strings, it must be properly escaped, by convention by adding another `\` in front of itself, to avoid being interpreted as a special character. For example, if you mean to write the exact string `\n` you must in fact write `\\n`, otherwise `\n` is interpreted a line break.
 
 This Python documentation explains why it especially matters in Regex syntax to escape backslashes: [https://docs.python.org/2/howto/regex.html\#the-backslash-plague](https://docs.python.org/2/howto/regex.html#the-backslash-plague)
 
