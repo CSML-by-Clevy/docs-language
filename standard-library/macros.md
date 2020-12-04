@@ -47,3 +47,27 @@ say Length("My horse is amazing") // 19
 say Length([1, 2, 3]) // 3
 ```
 
+## Random
+
+Return a random floating point number in the range 0-1 \(0 included, 1 excluded\).
+
+```text
+say Random() // 0.03196249773128712
+say Random() // 0.6416423921015862
+```
+
+## Floor
+
+Return the largest integer less than or equal to the given number.
+
+```cpp
+say Floor(1.23456) // 1
+```
+
+This is useful to generate a random integer in a given range:
+
+```cpp
+say Floor(Random() * 5) // a random integer between 0-4 (included)
+say Floor(Random() * 8) + 12 // a random integer between 12 - 19 (included)
+```
+
