@@ -33,3 +33,27 @@ somestep:
   goto flow anotherflow
 ```
 
+## Advanced navigation
+
+If you want to reach a specific step in a specific flow, you can \(since CSML v1.6\) use the new @ notation:
+
+```cpp
+goto step_name@flow_name
+```
+
+This is the universal way of navigating between steps and flow. The above two methods are actually special cases of this notation:
+
+* When the `@flow_name` part is not specified, CSML interprets it as "in the current flow". So `goto stepname` actually is shorthand notation for `goto stepname@current_flow`, where `current_flow` is dynamically matched from the name of the current flow, and works accordingly.
+* When the `step_name` part is not specified, CSML interprets it as `start`. So as `@` means "flow", `goto @flow_name` is the same as `goto start@flow_name` which is also the same as `goto flow flow_name`.
+
+### Examples
+
+```cpp
+goto stepname // navigate to the step named stepname in the current flow
+goto flow flowname // navigate to the start step in flow flowname
+goto @flowname // navigate to the start step in flow flowname
+goto stepname@flowname // navigate to step stepname in flow flowname
+```
+
+
+
