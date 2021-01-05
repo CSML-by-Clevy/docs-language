@@ -65,7 +65,7 @@ do val.remove_at(1) // ["Batman", "Superman"]
 Returns a new array with all the values found in the original array matching the given value.
 
 ```cpp
-array.find(x) => void
+array.find(x) => Array
 
 // example
 do val = ["Batman", "Robin", "Superman", "Batman"]
