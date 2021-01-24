@@ -118,9 +118,9 @@ foreach (val, index) in array {
 }
 ```
 
-### break
+### break, continue
 
-Exit from loops early and continue the flow execution normally.
+Exit from loops early or skip an iteration.
 
 ```cpp
 remember lightsabers = [
@@ -133,6 +133,8 @@ remember lightsabers = [
  ]
 
 foreach (ls) in lightsabers {
+  // we want to skip any red lightsaber
+  if (ls.color == "red") continue
   say "{{ls.owner}} had a {{ls.color}} lightsaber"
   // we want to stop after we find the first green lightsaber
   if (ls.color == "green") break

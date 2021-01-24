@@ -63,13 +63,34 @@ do matched = event.match(btnred, btnblue)
 // in case it contains the button object
 // we can prefer to remember its manually set payload
 // instead of the button's title
-if (matched) remember favcolor = matched.value
+if (matched) remember favcolor = matched.payload
 
 // or continue the same way as before
 else say "{{event}} is not a valid answer"
 ```
 
-### .get\_type\(\)
+### event.match\_array\(\)
+
+Similar to `event.match()`, but takes an array as argument. It also returns the matched value, if any. In many places, it is easier to use as listing all the individual items of the array. The same example as above would now read:
+
+```cpp
+say Question(
+  "What is your favorite color",
+  buttons=[
+    Button("red", accepts=["Red", "Dark orange"]),
+    Button("blue", accepts=["Blue", "sky", "navy"]),
+  ] as buttons
+)
+hold
+
+// with match_array(), you don't have to list all options
+do matched = event.match_array(buttons)
+
+if (matched) remember favcolor = matched.title
+else say "{{event}} is not a valid answer"
+```
+
+### event.get\_type\(\)
 
 Returns the type of event. For example, if the user typed something, `event.get_type()` will be `"text"`. Or if the user clicked on a button \(which yields a `payload` the type of event is `"payload"`.
 
