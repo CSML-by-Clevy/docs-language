@@ -30,10 +30,39 @@ someotherstep: /* will not be executed */
 
 ### say
 
-Send a message to the end user.
+Send a message to the end user. For the full reference on Components
 
 ```cpp
 say "The quick brown fox jumps over the lazy dog."
+```
+
+### debug
+
+Print a simplify version of the following value. Its output is a special debug component \(same structure as a `Text` component with a `debug` content\_type\).
+
+If the value is a primitive \(String, Number...\), it will be printed entirely.  
+If it is an Object or Array, only the structure of the first level will be printed.
+
+```cpp
+do somevalue = 123
+debug somevalue // output: 123
+
+do mylargeobj = {
+    "val": 1,
+    "something": {"toto": "tutu" },
+    "other": "hello",
+    "onemore": [1, 2, 3]
+}
+debug mylargeobj // output: {"val": 1, "something": "[Object]", "other": "hello", "onemore": "[Array]"}
+```
+
+Unlike the `say` keyword, it can also be used inside native CSML functions:
+
+```cpp
+fn is_triple_even(num):
+  do triple = num * 3
+  debug triple
+  return (triple % 2)
 ```
 
 ### hold
@@ -92,8 +121,6 @@ do myarr[42] = 1 // the array needs to have at least the requested number of ite
 remember myobj = Object("key"="value")
 do myobj.missing.otherkey = 1 // all the parent properties must exist and be objects as well
 ```
-
-
 
 ### use..as \(deprecated\)
 
@@ -183,7 +210,7 @@ if (sky == "blue") goto beach
 else goto restaurant
 ```
 
-### match
+### match \(deprecated\)
 
 {% hint style="warning" %}
 This syntax is obsolete, but for backwards-compatibility reasons remains valid CSML. However, prefer using the `event.match(...)` alternative which is much more versatile.
