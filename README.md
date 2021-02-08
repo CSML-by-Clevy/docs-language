@@ -1,12 +1,16 @@
 # Introduction
 
-The CSML \(Conversational Standard Meta Language\) is a Domain-Specific Language developed for creating rich conversational experiences easily.
+## What is CSML?
 
-Written itself in Rust, the purpose of this language is to simplify the creation and maintenance of rich conversational interactions between humans and machines. With a very expressive and text-only syntax, CSML flows are easy to understand, making it easy to deploy and maintain conversational agents. The CSML handles short and long-term memory slots, metadata injection, and connecting to any third party API or injecting arbitrary code in any programming language thanks to its powerful runtime APIs.
+CSML \(Conversational Standard Meta Language\) is an **Open-Source,** **Domain-Specific Language** designed for **developing rich conversational experiences easily**. It makes creating powerful chatbots extremely easy.
 
-By using the CSML language, any developer can integrate arbitrarily complex conversational agents on any channel \(Facebook Messenger, Slack, Facebook Workplace, Microsoft Teams, custom webapp, ...\) and make any bot available to any end user. The CSML platform comes with a large number of channel integrations that work out of the box, but developers are free to add new custom integrations by using the CSML interfaces.
+Written itself in Rust, the purpose of this language is to simplify the creation and maintenance of rich conversational interactions between humans and machines. With a very expressive and text-only syntax, CSML flows are easy to write and understand, making it easy to deploy and maintain conversational agents.
 
-### Getting started
+CSML natively handles short and long-term memory slots, metadata injection, and connecting to any third party API or injecting arbitrary code in any programming language thanks to its powerful runtime APIs.
+
+By using the CSML language, any developer can integrate arbitrarily complex conversational agents on any channel \(Facebook Messenger, Slack, Facebook Workplace, Microsoft Teams, custom webapp, ...\) and make any bot available to any end user. In addition to the language itself, [CSML Studio](https://studio.csml.dev), an online, full-featured development and deployment platform, comes with a large number of channel integrations that work out of the box, but developers are free to add new custom integrations by using the CSML interfaces.
+
+## Getting started
 
 ```cpp
 /* Always start the conversation with this step */
@@ -44,6 +48,4 @@ This goal of the example flow on the right is to retrieve the name of the user.
 To do so, we will first check if we already have it in memory. If so, we can use it to greet our user, and close this conversation. Otherwise, we can go to a different step and simply ask for it. When the user responds, we will be able to `remember` the name for future use, and close the conversation.
 
 This simple flow shows a few of the features of the language. There are many more, which we will go into in detail now!
-
-## 
 
