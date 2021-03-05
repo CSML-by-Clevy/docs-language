@@ -16,7 +16,7 @@ To run on your own machine, you will need a way to run the engine \(CSML comes w
 
 ### With Docker
 
-We provide an easy-to-use docker image to run CSML on your own computer. To get started, follow the instructions [on this repository](https://github.com/CSML-by-Clevy/csml-engine-docker).
+We provide an easy-to-use docker image to run CSML on your own computer. To get started, follow the instructions [on Docker Hub](https://hub.docker.com/r/clevy/csml-engine).
 
 ### Using a pre-built CSML Engine binary
 
