@@ -12,7 +12,11 @@ CSML Studio includes everything you need to create, develop and maintain your ch
 
 ## Install CSML Locally
 
-To run on your own machine, you will need a way to run the engine \(CSML comes with bindings for nodejs or directly in rust\), as well as a database. Optionally, you will also need a custom `Fn` runtime \([more about this on this page](custom-code-execution.md)\).
+To run CSML on your own machine, you will need a way to run the engine \(CSML comes with bindings for nodejs or directly in rust\), as well as a database. Optionally, you will also need a custom `App` runtime \([more about this on this page](custom-code-execution.md)\).
+
+{% hint style="info" %}
+[This blog post](https://blog.csml.dev/how-to-install-a-self-hosted-csml-engine-on-ubuntu-18-04/) explains how to run the CSML engine on your own server. It may be a useful starting point for a custom installation of CSML!
+{% endhint %}
 
 ### With Docker
 
