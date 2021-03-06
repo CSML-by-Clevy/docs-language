@@ -65,7 +65,7 @@ You can also iterate over an array \(represented by items inside square brackets
 
 ```cpp
 // Arrays
-use ["a", "b", "c"] as items
+do items = ["a", "b", "c"]
 
 /* iterate over all the elements in the array */
 foreach (elem, index) in items {
@@ -79,7 +79,7 @@ Finally, you can also modify the contents of an array either by assigning a new 
 
 ```cpp
 // Array operations
-use ["a", "b", "c"] as items
+do items = ["a", "b", "c"]
 
 do items.pop() // ["a", "b"]
 do items.push("x") // ["a", "b", "x"]
