@@ -71,3 +71,13 @@ say Floor(Random() * 5) // a random integer between 0-4 (included)
 say Floor(Random() * 8) + 12 // a random integer between 12 - 19 (included)
 ```
 
+## UUID
+
+Generate a random UUID \(v1 or v4, defaults to v4\)
+
+```cpp
+say UUID() // "aa4b9fb4-4d37-488c-981f-8aebc4eb9eaa"
+say UUID("v1") // "d0b40e8e-7ea4-11eb-9439-0242ac130002"
+say UUID("v4") // "4b784011-e49b-4913-9d58-7abf4f8a56bc"
+```
+
