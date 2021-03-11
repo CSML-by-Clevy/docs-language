@@ -5,7 +5,7 @@ CSML is able to handle many types of messages by default.
 To send a message to the end user, simply use the keyword `say` followed by the message type you want to send. 
 
 ```cpp
-somestep:
+start:
   say "I'm a text message"
   say Wait(1500)
   say Text("I'm also a text message")
