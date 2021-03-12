@@ -64,15 +64,14 @@ say obj2.body.otherkey // 123
 You can also iterate over an array \(represented by items inside square brackets: `["a", "b", "c"]`\) with the `foreach` keyword, and access any of its items by using its index in square brackets notation: `items[2]`.
 
 ```cpp
-// Arrays
 do items = ["a", "b", "c"]
 
-/* iterate over all the elements in the array */
+// iterate over all the elements in the array
 foreach (elem, index) in items {
   say "index: {{index}}, elem: {{elem}}"
 }
 
-say items[2] /* "c" */
+say items[2] // "c"
 ```
 
 Note that foreach creates a copy of each item as it iterates over the array. So for example, in this next example, the array is not modified:
@@ -91,7 +90,6 @@ say "{{items}}" // ["a", "b", "c"]
 You can modify the contents of an array either by assigning a new value to any of the items in the array, adding new items at the end with `array.push(elem)` or removing the last element with `array.pop()`.
 
 ```cpp
-// Array operations
 do items = ["a", "b", "c"]
 
 do items = ["a", "b", "c"]
@@ -102,6 +100,7 @@ foreach (item, index) in items {
 }
 
 say "{{items}}" // ["A", "B", "C"]: the array was modified
+say items[2] // "C"
 ```
 
 You can also use [Array methods](standard-library/array-methods.md) to apply changes or get data from arrays.
