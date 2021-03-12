@@ -75,16 +75,36 @@ foreach (elem, index) in items {
 say items[2] /* "c" */
 ```
 
-Finally, you can also modify the contents of an array either by assigning a new value to any of the items in the array, adding new items at the end with `array.push(elem)` or removing the last element with `array.pop()`.
+Note that foreach creates a copy of each item as it iterates over the array. So for example, in this next example, the array is not modified:
+
+```cpp
+do items = ["a", "b", "c"]
+
+foreach (item) in items {
+  do item = item.to_uppercase() 
+  say item // "A", "B", "C"
+}
+
+say "{{items}}" // ["a", "b", "c"]
+```
+
+You can modify the contents of an array either by assigning a new value to any of the items in the array, adding new items at the end with `array.push(elem)` or removing the last element with `array.pop()`.
 
 ```cpp
 // Array operations
 do items = ["a", "b", "c"]
 
-do items.pop() // ["a", "b"]
-do items.push("x") // ["a", "b", "x"]
-do items[1] = "Z" // ["a", "Z", "x"]
+do items = ["a", "b", "c"]
+foreach (item, index) in items {
+  do items[index] = item.to_uppercase() 
+  say item // "a", "b", "c": the copy has not been affected
+  say items[index] // "A", "B", "C": but the array content has been modified
+}
+
+say "{{items}}" // ["A", "B", "C"]: the array was modified
 ```
+
+You can also use [Array methods](standard-library/array-methods.md) to apply changes or get data from arrays.
 
 ## Printing non-literal values
 
