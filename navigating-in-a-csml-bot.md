@@ -55,5 +55,41 @@ goto @flowname // navigate to the start step in flow flowname
 goto stepname@flowname // navigate to step stepname in flow flowname
 ```
 
+## Variable step and flow names
 
+> Introduced in CSML v1.5
+
+As you can see above, steps and flows use strings as identifiers, but they are expressed without double quotes `"..."`. In order to navigate to dynamically set steps or flows, CSML adds a special syntax, similar to the _dereference pointer_ concept in other languages.
+
+To go to a variable step or flow, you can reference the variable name prefixed with a `$` sign:
+
+```cpp
+do mystep = "somestep"
+do myflow = "someflow"
+
+goto $mystep@$myflow
+```
+
+Any of the syntaxes presented above are supported. For instance:
+
+```cpp
+do buttons = [Button("Burgers"), Button("Vegetables")]
+say Question(
+  "What is your favorite food?",
+  buttons = buttons
+)
+hold
+
+do matched = event.match_array(buttons)
+
+if (!matched) { /* handle case where input does not match anything */ }
+
+do target = matched.title
+goto flow $target
+
+// depending on which button the user selected, this is equivalent to
+// goto flow Burgers or goto flow Vegetables
+```
+
+Please note that dot notation is not supported in variable flow and step names.
 
