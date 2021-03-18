@@ -24,6 +24,7 @@
 * [HTTP](standard-library/http.md)
 * [Crypto](standard-library/crypto/README.md)
   * [JWT](standard-library/crypto/jwt.md)
+  * [Hash & HMAC](standard-library/crypto/hash-and-hmac.md)
 * [String methods](standard-library/string-methods.md)
 * [Array methods](standard-library/array-methods.md)
 * [Object methods](standard-library/object-methods.md)
