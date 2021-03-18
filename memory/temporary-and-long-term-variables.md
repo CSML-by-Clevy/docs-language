@@ -47,11 +47,11 @@ start:
 
 ## Globally-Accessible Variables
 
-Inside any given step, a number of global variables are made available to the developer. These variables include past memories \(`remember`\), step context \(`as`\), and input metadata.
+Inside any given step, a number of global variables are made available to the developer. These variables include past memories, step context, and request metadata. Some of these variables are available globally, including in CSML functions:
 
-* `event` \(Event\): only defined in the step triggered immediately after a user's input. It contains the user input, or `NULL` when empty
-* `retries` \(Number\): number of times the current step has been reached previously in the current conversation
-* `_metadata` \(Memory\): read-only memory object that is injected into the conversation by the channel. Usage: `_metadata.something`
+* `event`: only defined in the step triggered immediately after a user's input. It contains the user input, or `NULL` when empty
+* `_metadata`: read-only object that is injected into the conversation by the channel. Usage: `_metadata.something`
+* `_env`: read-only object containing the bot's defined environment variables. Usage: `_env.something`
 
 ## ⚠️ Limitations
 
