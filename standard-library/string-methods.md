@@ -147,3 +147,23 @@ do val.split("is") // ["th", " ", " a long string"]
 do val.split("camembert") // ["this is a long string"]
 ```
 
+### .slice\(start, end\) =&gt; String
+
+Cut a string between the `start` and `end` characters. Some rules apply:
+
+* If `end` is not specified, all the characters after `start` are returned.
+* When specified, `end` must be ≥ `start`.
+* If any of the parameters is &lt; 0, the count is made from the end of the string.
+
+```cpp
+say "abcdefghijklmnop".slice(2, 4) // "cd"
+say "abcdefghijklmnop".slice(7) // "hijklmnop"
+say "abcdefghijklmnop".slice(-4) // "mnop"
+say "abcdefghijklmnop".slice(-4, 14) // "mn"
+
+say "abcdefghijklmnop".slice(-4, 3) // Error
+say "abcdefghijklmnop".slice(2, 1) // Error
+```
+
+
+
