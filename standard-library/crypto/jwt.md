@@ -46,6 +46,8 @@ This method returns a properly encoded JWT as a string.
 
 **Note:** `decode` does not try to verify that the token is valid. It simply decodes its payload back to the original form.
 
+This method returns the full JWT data, in the form:`{ "payload": { ... your data }, "headers": { "alg": ALG, "typ": "JWT" }}`
+
 ### verify
 
 **exemple:** `JWT(token).verify(claims, algorithm, secret)`
@@ -53,6 +55,8 @@ This method returns a properly encoded JWT as a string.
 * `claims`: set of claims \(in JSON form\) to verify the JWT against
 
 **Note:** only valid claims are verified. See the list of official claims in the JWT specs [here](https://www.iana.org/assignments/jwt/jwt.xhtml#claims).
+
+This method returns the full JWT data, in the form:`{ "payload": { ... your data }, "headers": { "alg": ALG, "typ": "JWT" }}`
 
 ## Supported algorithms
 
