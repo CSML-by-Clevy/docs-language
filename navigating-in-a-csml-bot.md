@@ -35,7 +35,9 @@ somestep:
 
 ## Advanced navigation
 
-If you want to reach a specific step in a specific flow, you can \(since CSML v1.6\) use the new @ notation:
+> Introduced in CSML v1.2
+
+If you want to reach a specific step in a specific flow, you can use the @ notation:
 
 ```cpp
 goto step_name@flow_name
@@ -91,5 +93,7 @@ goto flow $target
 // goto flow Burgers or goto flow Vegetables
 ```
 
-Please note that dot notation is not supported in variable flow and step names.
+{% hint style="warning" %}
+Please note that dot notation \(accessing child properties in an object or array, i.e `a.b`\) is not supported in variable flow and step names.
+{% endhint %}
 
