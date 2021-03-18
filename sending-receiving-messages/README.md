@@ -113,7 +113,7 @@ In those cases, a local variable, `event`, is made available, with the content o
 ## ⚠️ Limitations
 
 {% hint style="danger" %}
-The maximum theoretical size of a `say` payload is **16KB**. However, each channel will have different limitations depending on the type of component. For a Text component for example, most channels are limited to a few hundred characters for. 
+The maximum theoretical size of a `say` payload is **16KB**. However, each channel will have different limitations depending on the type of component. For a `Text` component for example, most channels are limited to a few hundred characters. 
 
 Please refer to each channel's official documentation to find out the practical limitations of each component.
 {% endhint %}
