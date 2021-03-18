@@ -22,6 +22,8 @@
 * [Keywords](standard-library/keywords.md)
 * [Macros](standard-library/macros.md)
 * [HTTP](standard-library/http.md)
+* [Crypto](standard-library/crypto/README.md)
+  * [JWT](standard-library/crypto/jwt.md)
 * [String methods](standard-library/string-methods.md)
 * [Array methods](standard-library/array-methods.md)
 * [Object methods](standard-library/object-methods.md)
