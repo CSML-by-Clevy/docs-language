@@ -57,7 +57,7 @@ goto @flowname // navigate to the start step in flow flowname
 goto stepname@flowname // navigate to step stepname in flow flowname
 ```
 
-## Variable step and flow names
+## Dynamic step and flow names
 
 > Introduced in CSML v1.5
 
