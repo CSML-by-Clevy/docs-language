@@ -32,19 +32,6 @@ otherstep:
   say tmpvar // "Hi there"
 ```
 
-## User Context
-
-There is a third type of memory, `_metadata` \(which can be compared to the user's context at the beginning of the conversation\).
-
-This memory type is injected by the channel at the beginning of the conversation and contains any data that the channel already has about the user that can be used in the conversation later. **For example, this could include the user's full name or email address, their job title, where they are from**...
-
-You can convert a local variable to a long-term memory by `remember` -ing it at any time.
-
-```cpp
-start:
-  say "Hello {{_metadata.firstname}} {{_metadata.lastname}}!" // Hello Tony Stark!
-```
-
 ## ⚠️ Limitations
 
 {% hint style="warning" %}
