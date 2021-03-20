@@ -8,6 +8,7 @@
 * [The Event](the-event.md)
 * [Memory](memory/README.md)
   * [Using Variables in Messages](memory/interpolation.md)
+  * [Global variables](memory/global-variables.md)
   * [Temporary and Long-Term variables](memory/temporary-and-long-term-variables.md)
 * [Navigating in a CSML Bot](navigating-in-a-csml-bot.md)
 * [Conditional Logic](conditional-logic.md)

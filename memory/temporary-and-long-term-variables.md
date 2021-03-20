@@ -45,14 +45,6 @@ start:
   say "Hello {{_metadata.firstname}} {{_metadata.lastname}}!" // Hello Tony Stark!
 ```
 
-## Globally-Accessible Variables
-
-Inside any given step, a number of global variables are made available to the developer. These variables include past memories, step context, and request metadata. Some of these variables are available globally, including in CSML functions:
-
-* `event`: only defined in the step triggered immediately after a user's input. It contains the user input, or `NULL` when empty
-* `_metadata`: read-only object that is injected into the conversation by the channel. Usage: `_metadata.something`
-* `_env`: read-only object containing the bot's defined environment variables. Usage: `_env.something`
-
 ## ⚠️ Limitations
 
 {% hint style="warning" %}
