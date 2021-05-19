@@ -5,8 +5,9 @@ Inside any given step, a number of global variables are made available to the de
 * `event`: contains the user input, or `NULL` when empty. See [The Event](../the-event.md).
 * `_metadata`: read-only object that is injected into the conversation by the channel. _Usage:_ `_metadata.something`
 * `_env`: read-only object containing the bot's defined environment variables. _Usage:_ `_env.something`
+* `_memory`: read-only object containing the user's current memory state. This is especially helpful if you need to print the full state of the user's memory for debugging purposes!
 
-## Metadata: user-level context
+## \_metadata: user-level context
 
 The `_metadata` global contains user-level context for each request.
 
@@ -18,7 +19,7 @@ say "Hello {{_metadata.firstname}} {{_metadata.lastname}}!" // Hello Tony Stark!
 
 
 
-## Env: bot-level context
+## \_env: bot-level context
 
 The `_env` global contains bot-level context for the entire bot and is shared across all users of the bot.
 

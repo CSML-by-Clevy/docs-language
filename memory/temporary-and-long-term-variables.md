@@ -32,6 +32,27 @@ otherstep:
   say tmpvar // "Hi there"
 ```
 
+## The Memory object
+
+CSML provides a `_memory` global, read-only variable, which contains all variables saved until now for the current user. This  especially useful if you need to debug the state of a user's memory at any given step:
+
+```cpp
+somestep:
+  remember something = 1
+  // ...
+
+someotherstep:
+  do something = 8
+  // ...
+  
+wherever:
+  // when we get there, is `something` set to 1, 8
+  // or even available at all?
+  say "{{_memory}}"
+  
+  
+```
+
 ## ⚠️ Limitations
 
 {% hint style="warning" %}
