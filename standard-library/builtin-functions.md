@@ -87,12 +87,14 @@ The `Time()` helpers lets your manipulate timestamps and dates easily.
 
 ```cpp
 do time = Time() // initialize a Time object at the current UTC time
-do time = Time().at(2019, 03, 28, 12, 53, 20, 123) // initialize a time object at 2019-03-28T12:53:20.123Z
+do time = Time().at(2021, 03, 28, 12, 53, 20, 123) // initialize a time object at 2021-03-28T12:53:20.123Z
 
 do time.unix() // generate the unix timestamp (in milliseconds)
 
 do time.format() // returns an ISO8601 string
 do time.format("%h%d") // returns a string with a custom format
+
+do time = Time().parseISO("2021-03-28T12:53:20.123Z") // parse an ISO-formatted string to generate a Time object
 ```
 
 {% hint style="info" %}
