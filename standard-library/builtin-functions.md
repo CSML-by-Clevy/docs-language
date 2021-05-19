@@ -1,4 +1,4 @@
-# Macros
+# Built-in Functions
 
 Macros are built-in functions that perform some common tasks. Below is a list of some common macros that you can use at any stage in your CSML flows.
 
@@ -79,5 +79,20 @@ Generate a random UUID \(v1 or v4, defaults to v4\)
 say UUID() // "aa4b9fb4-4d37-488c-981f-8aebc4eb9eaa"
 say UUID("v1") // "d0b40e8e-7ea4-11eb-9439-0242ac130002"
 say UUID("v4") // "4b784011-e49b-4913-9d58-7abf4f8a56bc"
+```
+
+## Time
+
+The `Time()` helpers lets your manipulate timestamps and dates easily. 
+
+```text
+do time = Time() // initialize a Time object at the current UTC time
+do time = Time().at(2019, 03, 28, 12, 53, 20, 123) // initialize a time object at 2019-03-28T12:53:20.123Z
+
+do time.unix() // generate the unix (ms) timestamp of the Time object
+
+do time.format() // returns an ISO8601 string of the given time object
+do time.format("%h%d") // returns the Time object as a string with a custom format
+// Full options list available here: https://docs.rs/chrono/0.4.19/chrono/format/strftime/index.html
 ```
 

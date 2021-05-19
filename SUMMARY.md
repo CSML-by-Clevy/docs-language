@@ -21,7 +21,7 @@
 ## Standard Library
 
 * [Keywords](standard-library/keywords.md)
-* [Macros](standard-library/macros.md)
+* [Built-in Functions](standard-library/builtin-functions.md)
 * [HTTP](standard-library/http.md)
 * [Crypto Utilities](standard-library/crypto/README.md)
   * [JWT](standard-library/crypto/jwt.md)
