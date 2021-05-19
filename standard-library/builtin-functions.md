@@ -93,6 +93,9 @@ do time.unix() // generate the unix (ms) timestamp of the Time object
 
 do time.format() // returns an ISO8601 string of the given time object
 do time.format("%h%d") // returns the Time object as a string with a custom format
-// Full options list available here: https://docs.rs/chrono/0.4.19/chrono/format/strftime/index.html
 ```
+
+{% hint style="info" %}
+CSML's **Time** function is based on rust's Chrono library. All the formatting options are listed here: [https://docs.rs/chrono/0.4.19/chrono/format/strftime/index.html](https://docs.rs/chrono/0.4.19/chrono/format/strftime/index.html)
+{% endhint %}
 
