@@ -85,14 +85,14 @@ say UUID("v4") // "4b784011-e49b-4913-9d58-7abf4f8a56bc"
 
 The `Time()` helpers lets your manipulate timestamps and dates easily. 
 
-```text
+```cpp
 do time = Time() // initialize a Time object at the current UTC time
 do time = Time().at(2019, 03, 28, 12, 53, 20, 123) // initialize a time object at 2019-03-28T12:53:20.123Z
 
-do time.unix() // generate the unix (ms) timestamp of the Time object
+do time.unix() // generate the unix timestamp (in milliseconds)
 
-do time.format() // returns an ISO8601 string of the given time object
-do time.format("%h%d") // returns the Time object as a string with a custom format
+do time.format() // returns an ISO8601 string
+do time.format("%h%d") // returns a string with a custom format
 ```
 
 {% hint style="info" %}
