@@ -94,10 +94,12 @@ do time.unix() // generate the unix timestamp (in milliseconds)
 do time.format() // returns an ISO8601 string
 do time.format("%h%d") // returns a string with a custom format
 
-do time = Time().parseISO("2021-03-28T12:53:20.123Z") // parse an ISO-formatted string to generate a Time object
+do time = Time().parse("2021-03-28") // parse a date
+do time = Time().parse("2021-03-28T12:53:20Z") // parse an ISO-formatted string
+do time = Time().parse("01/01/2021", "%d/%m/%Y") // parse a custom-formatted string
 ```
 
 {% hint style="info" %}
-CSML's **Time** function is based on rust's Chrono library. All the formatting options are listed here: [https://docs.rs/chrono/0.4.19/chrono/format/strftime/index.html](https://docs.rs/chrono/0.4.19/chrono/format/strftime/index.html)
+CSML's **Time** function is based on Rust's Chrono library. All the formatting options are listed here: [https://docs.rs/chrono/0.4.19/chrono/format/strftime/index.html](https://docs.rs/chrono/0.4.19/chrono/format/strftime/index.html)
 {% endhint %}
 
