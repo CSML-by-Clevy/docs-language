@@ -26,6 +26,18 @@ do val = "Where is Brian?"
 do val.to_lowercase() // "where is brian?"
 ```
 
+### .capitalize\(\)
+
+Return the same string with the first letter in uppercase. The rest of the string remains unchanged.
+
+```cpp
+string.capitalize() => String
+
+// example
+do val = "my name is John"
+do val.capitalize() // "My name is John"
+```
+
 ### .length\(\)
 
 Return the length of the target string.
