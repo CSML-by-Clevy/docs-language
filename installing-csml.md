@@ -2,9 +2,13 @@
 
 As an open-source programming language, there are several ways you can get started with CSML, either by compiling the sources yourself, using Docker, or using [CSML Studio](https://studio.csml.dev), a free online development environment provided by [Clevy.io](https://clevy.io).
 
-## No installation required: with CSML Studio
+## No installation required: with CSML Playground
 
-The easiest way to create CSML Chatbots is by using the free online development Studio available at [https://studio.csml.dev](https://studio.csml.dev/auth/register). No dependencies, no installation required: to get started, simply create a free account and head to the [Studio documentation](https://docs.csml.dev/studio/) to create your first bot!
+The easiest way to create CSML Chatbots is by using the free online development playground available at [https://play.csml.dev](https://studio.csml.dev/auth/register). No dependencies, no installation, no signup required!
+
+**➡ Try CSML Playground now on** [**https://play.csml.dev**](https://studio.csml.dev)**!**
+
+You can also create a free account on CSML Studio, a professional online development and deployment tool for all your CSML chatbots. Read more [about CSML Studio here](https://csml.dev/studio), and head over to  the [Studio documentation](https://docs.csml.dev/studio/)!
 
 CSML Studio includes everything you need to create, develop and maintain your chatbots. You get a code editor and test chatbox, built-in services to author functions and install custom or managed integrations, deploy to many different communication channels including Messenger, Workplace Chat, Microsoft Teams, Slack, Whatsapp... and monitor the usage with custom analytics.
 
