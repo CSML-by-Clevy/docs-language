@@ -122,6 +122,16 @@ remember myobj = Object("key"="value")
 do myobj.missing.otherkey = 1 // all the parent properties must exist and be objects as well
 ```
 
+### forget
+
+The `forget` keyword lets you forget memories selectively, or globally.
+
+```cpp
+forget something // forget a single memory
+forget [something, otherthing, thirdthing] // forget several memories at once
+forget * // forget EVERYTHING (dangerous!)
+```
+
 ### use..as \(deprecated\)
 
 See `as` keyword.
