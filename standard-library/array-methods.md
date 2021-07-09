@@ -250,3 +250,27 @@ say "{{x}}" // Error
 
 ```
 
+### .map\(fn\), .filter\(fn\), .reduce\(acc, fn\)
+
+These methods are useful ways to construct a new arrays from existing arrays. They are inspired from similar methods in other languages and follow the same general syntax.
+
+Here are some examples of what these methods can help you achieve:
+
+```cpp
+// create a new array where each original item is multiplied by 2
+do newArray = [1, 2, 3, 4].map((item, index) {
+  return x * 2
+}) // newArray = [2, 4, 6, 8]
+
+// create a new array containing even numbers from the original array
+do newArray = [1, 2, 3, 4].filter((item, index) {
+  return x % 2 == 0
+}) // newArray = [2, 4]
+
+// create a new value by adding all the elements together
+do sum = [1, 2, 3, 4].reduce(0, (acc, val, index) {
+  do acc = acc + val
+  return acc
+}) // sum = 1 + 2 + 3 + 4 = 10
+```
+
