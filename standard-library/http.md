@@ -55,6 +55,7 @@ The available methods are:
 
 * `.get()` / `.post(body)` / `.put(body)` / `.patch(body)` / `.delete()` : set the request verb, and add an optional JSON-formatted `body` 
 * `.set(data)`: set the request headers, where `{"x-api-key":"somevalue"}` is added as `x-api-key:somevalue` headers
+* `.auth(username, password)` set basic auth headers
 * `.query(data)`: set the query strings, where `{"key":"value"}` is automatically translated to `?key=value`
 
 
