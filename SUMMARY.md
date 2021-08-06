@@ -22,8 +22,8 @@
 
 * [Keywords](standard-library/keywords.md)
 * [Built-in Functions](standard-library/builtin-functions.md)
-* [HTTP](standard-library/http.md)
-* [SMTP](standard-library/smtp.md)
+* [HTTP Client](standard-library/http.md)
+* [SMTP Client](standard-library/smtp.md)
 * [Crypto Utilities](standard-library/crypto/README.md)
   * [JWT](standard-library/crypto/jwt.md)
   * [Hash, HMAC](standard-library/crypto/hash-hmac.md)

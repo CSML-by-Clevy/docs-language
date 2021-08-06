@@ -1,4 +1,4 @@
-# HTTP
+# HTTP Client
 
 CSML includes a native HTTP client. The following verbs are accepted:
 

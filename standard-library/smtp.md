@@ -1,4 +1,4 @@
-# SMTP
+# SMTP Client
 
 CSML includes a native SMTP client, allowing you to easily send emails from your chatbot.
 
