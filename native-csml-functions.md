@@ -23,7 +23,7 @@ Here is an example of a simple `my_double_add()` function, that takes 2 paramete
 ```cpp
 fn my_double_add(x, y):
   do dbl_x = x * 2
-  do dbl_y = y * 2
+  do dbl_y = x * 2
   return dbl_x + dbl_y
 
 start:

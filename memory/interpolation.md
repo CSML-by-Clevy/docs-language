@@ -21,3 +21,11 @@ start:
   say "Hi! My name is {{what}}. My name is {{who}}. My name is {{slim_shady}}"
 ```
 
+To concatenate two strings, you can also use the `+` operator (starting in CSML v1.8.0):
+
+```cpp
+// the three lines below are equivalent
+say firstname + " likes " + food
+say "{{firstname}} likes {{food}}"
+say [firstname, "likes", food].join(" ")
+```

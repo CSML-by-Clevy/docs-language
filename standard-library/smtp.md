@@ -23,7 +23,6 @@ do SMTP(hostname) // mandatory
  .auth(username, password) // optional, defaults to no auth
  .tls(true) // optional, defaults to auto upgrade to TLS if available
  .port(465) // optional, defaults to 465
- .send(email) // mandatory to perform the request
+ .send(email) // perform the send request
 
 ```
-

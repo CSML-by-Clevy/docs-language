@@ -38,9 +38,9 @@ say "The quick brown fox jumps over the lazy dog."
 
 ### debug
 
-Print a simplify version of the following value. Its output is a special debug component \(same structure as a `Text` component with a `debug` content\_type\).
+Print a simplify version of the following value. Its output is a special debug component (same structure as a `Text` component with a `debug` content\_type).
 
-If the value is a primitive \(String, Number...\), it will be printed entirely.  
+If the value is a primitive (String, Number...), it will be printed entirely.\
 If it is an Object or Array, only the structure of the first level will be printed.
 
 ```cpp
@@ -80,7 +80,7 @@ somestep:
 
 ### remember
 
-Save a value to the bot's memory with the given key. It can later be retrieved \(as soon as the next step\) with `"{{memory_item}}"`.
+Save a value to the bot's memory with the given key. It can later be retrieved (as soon as the next step) with `"{{memory_item}}"`.
 
 By default, the scope is bot/user/channel. The same user on a different channel, or a different user on the same channel, or the same user with a different bot will get a fresh memory instance.
 
@@ -104,7 +104,7 @@ Execute the following expression.
 
 Usually used for executing functions without caring for its return value, or for updating values of objects or arrays.
 
-When used in an assignment \(as in `x = y`\), the value `x` is saved as a local \(temporary\) variable.
+When used in an assignment (as in `x = y`), the value `x` is saved as a local (temporary) variable.
 
 ```cpp
 // execute a function
@@ -132,7 +132,7 @@ forget [something, otherthing, thirdthing] // forget several memories at once
 forget * // forget EVERYTHING (dangerous!)
 ```
 
-### use..as \(deprecated\)
+### use..as (deprecated)
 
 See `as` keyword.
 
@@ -152,6 +152,18 @@ Iterate over each element of an array.
 do array = ["a", "b", "c"]
 foreach (val, index) in array {
   say "at position {{index}} is element with value {{val}}"
+}
+```
+
+### while
+
+A simple loop with a condition check at every turn
+
+```cpp
+do i = 0
+while (i < 3) {
+  say "i = {{i}}"
+  do i = i + 1
 }
 ```
 
@@ -220,7 +232,7 @@ if (sky == "blue") goto beach
 else goto restaurant
 ```
 
-### match \(deprecated\)
+### match (deprecated)
 
 {% hint style="warning" %}
 This syntax is obsolete, but for backwards-compatibility reasons remains valid CSML. However, prefer using the `event.match(...)` alternative which is much more versatile.
@@ -244,7 +256,32 @@ if (event match btn) { // Note: this is equivalent to event.match(btn)
 }
 ```
 
-### mathematical operators
+### Mathematical Operators
 
 In CSML, you can use the 4 basic mathematical operators `+`, `-`, `*` and `/`, as well as the modulo operator `%`. The regular order of operations applies.
 
+Additionally, since CSML v1.8.0, you can use the shortcut `+=` and `-=` operators to add/subtract and assign values at the same time:
+
+```cpp
+do i = 8
+do i += 5
+say "i = {{i}}" // i = 13
+```
+
+### String Concatenation
+
+Starting with CSML v1.8.0, you can concatenate two or more strings together by using the `+` sign:
+
+```cpp
+do val1 = "John"
+do val2 = "Nutella"
+say val1 + " likes " + val2 // John likes Nutella
+```
+
+It is also possible to use string templating to insert any value in another string:
+
+```cpp
+do val1 = "John"
+do val2 = "Nutella"
+say "{{val1}} likes {{val2}}" // John likes Nutella
+```

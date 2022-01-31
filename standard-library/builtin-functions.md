@@ -49,9 +49,9 @@ say Length([1, 2, 3]) // 3
 
 ## Random
 
-Return a random floating point number in the range 0-1 \(0 included, 1 excluded\).
+Return a random floating point number in the range 0-1 (0 included, 1 excluded).
 
-```text
+```
 say Random() // 0.03196249773128712
 say Random() // 0.6416423921015862
 ```
@@ -73,7 +73,7 @@ say Floor(Random() * 8) + 12 // a random integer between 12 - 19 (included)
 
 ## UUID
 
-Generate a random UUID \(v1 or v4, defaults to v4\)
+Generate a random UUID (v1 or v4, defaults to v4)
 
 ```cpp
 say UUID() // "aa4b9fb4-4d37-488c-981f-8aebc4eb9eaa"
@@ -83,7 +83,7 @@ say UUID("v4") // "4b784011-e49b-4913-9d58-7abf4f8a56bc"
 
 ## Time
 
-The `Time()` helpers lets your manipulate timestamps and dates easily. 
+The `Time()` helpers lets your manipulate timestamps and dates easily.&#x20;
 
 ```cpp
 do time = Time() // initialize a Time object at the current UTC time
@@ -94,6 +94,9 @@ do time.unix() // generate the unix timestamp (in milliseconds)
 do time.format() // returns an ISO8601 string
 do time.format("%h%d") // returns a string with a custom format
 
+do time.add(60) // adds 60 seconds to the value
+do time.sub(60) // subtract 60 seconds to the value
+
 do time = Time().parse("2021-03-28") // parse a date
 do time = Time().parse("2021-03-28T12:53:20Z") // parse an ISO-formatted string
 do time = Time().parse("01/01/2021", "%d/%m/%Y") // parse a custom-formatted string
@@ -103,3 +106,16 @@ do time = Time().parse("01/01/2021", "%d/%m/%Y") // parse a custom-formatted str
 CSML's **Time** function is based on Rust's Chrono library. All the formatting options are listed here: [https://docs.rs/chrono/0.4.19/chrono/format/strftime/index.html](https://docs.rs/chrono/0.4.19/chrono/format/strftime/index.html)
 {% endhint %}
 
+## Exists
+
+Check if a variable has been saved in the chatbot's memory before for the current user.
+
+```cpp
+do Exists("myvar") // false
+remember myvar = 123
+do Exists("myvar") // true
+```
+
+{% hint style="warning" %}
+`Exists` only checks for the existance of **top-level variable names** in the chatbot's memory for the current user, i.e `obj` and not `obj.prop`
+{% endhint %}
