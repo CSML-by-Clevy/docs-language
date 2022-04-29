@@ -4,7 +4,7 @@ Although CSML differentiates between _Float_ and _Integer_, all methods are avai
 
 Given the automatic type inference, CSML will automatically try to map integers and floats to whichever type makes more sense in the context.
 
-### .pow\(Number\)
+### .pow(Number)
 
 Raise the target integer to the power of the given integer.
 
@@ -16,7 +16,7 @@ do val = 3
 do val.pow(2) // 9
 ```
 
-### .abs\(\)
+### .abs()
 
 Return the absolute value of the target number.
 
@@ -28,7 +28,7 @@ do val = -42
 do val.abs() // 42
 ```
 
-### .cos\(\), .sin\(\), .tan\(\)
+### .cos(), .sin(), .tan()
 
 Return the cosine, sine or tangent of the target number.
 
@@ -43,7 +43,7 @@ do val.sin() // -0,224442219
 do val.tan() // -0,2303182363
 ```
 
-### .floor\(\), .ceil\(\), .round\(\)
+### .floor(), .ceil(), .round()
 
 Round the number respectively down, up or using mathematical rounding.
 
@@ -59,5 +59,8 @@ do val.ceil() // 11
 do val.round() // 11
 ```
 
-### 
+### .precision(n)
 
+```cpp
+do val = 1.234567.precision(2) // 1.23
+```
