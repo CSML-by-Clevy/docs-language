@@ -12,6 +12,14 @@ Useful for randomisation of dialogue parts!
 say OneOf(["I like you", "You're awesome"])
 ```
 
+## Or
+
+If the first element exists return it, otherwise return the second argument as a default value
+
+```cpp
+say Or(var, "default value")
+```
+
 ## Shuffle
 
 Given an array, return it with its elements in a random order.
@@ -83,7 +91,7 @@ say UUID("v4") // "4b784011-e49b-4913-9d58-7abf4f8a56bc"
 
 ## Time
 
-The `Time()` helpers lets your manipulate timestamps and dates easily.&#x20;
+The `Time()` helpers lets your manipulate timestamps and dates easily.
 
 ```cpp
 do time = Time() // initialize a Time object at the current UTC time
