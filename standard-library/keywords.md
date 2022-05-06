@@ -194,6 +194,26 @@ while (i < 3) {
 }
 ```
 
+### const
+
+Declare constant values that are accessible and immutable across the whole flow. Two different flows can have a different set of `const` or different values for the same `const`!
+
+```cpp
+const MY_CONST = 42
+
+start:
+  say "The value of MY_CONST is {{MY_CONST}}" // The value of MY_CONST is 42
+  do MY_CONST = 14 // Forbidden! MY_CONST is immutable
+```
+
+{% hint style="warning" %}
+This `const` keyword can only be used at the flow root, like the `import` keyword
+{% endhint %}
+
+### import
+
+see [Native CSML Functions](../native-csml-functions.md).
+
 ### break, continue
 
 Exit from loops early or skip an iteration.
