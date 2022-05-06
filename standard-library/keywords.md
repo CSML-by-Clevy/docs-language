@@ -78,6 +78,33 @@ somestep:
   goto end
 ```
 
+### hold\_secure
+
+_introduced in CSML v1.10.0_
+
+Same as `hold`, except any user input that comes after that will not be saved in any CSML memory or displayable. However, you can perform operations on the value itself. This is a good use case for secret values that should not be saved in clear text anywhere in a database:
+
+```cpp
+start:
+  say "Type something super secret, I promise I won't tell!"
+  hold_secure // indicates that the next input will be secure
+
+  // Value can not be displayed back or remembered in any way
+  say "this is a secret: {{event}}" // prevented by CSML
+  remember impossible = event // prevented by CSML
+  do impossible = event // prevented by CSML
+
+  
+  // You can however perform operations on the event,
+  // for example checking if the value is accepted
+  if (event == "password") say "This is hardly a good secret!"
+  else say "OK, good good"
+```
+
+{% hint style="warning" %}
+This keyword should be used with extreme care. It is for example a very bad practice to ask users for their password in a chat, and it should not be used for this purpose. However, this keyword can be extremely useful to share data (personal information, short-lived secrets...) that requires extra precautions or should not be stored in clear text (or at all).
+{% endhint %}
+
 ### remember
 
 Save a value to the bot's memory with the given key. It can later be retrieved (as soon as the next step) with `"{{memory_item}}"`.

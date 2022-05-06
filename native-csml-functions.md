@@ -10,7 +10,7 @@ Declaring a function is similar to declaring a step with some minor differences:
 
 * the name of the function is preceded by the keyword `fn` ,
 * there is a list of parameters between parentheses after the name of the function,
-* but also, like a step declaration, it ends with a semicolon 
+* but also, like a step declaration, it ends with a semicolon
 
 ```cpp
 fn my_function_name(param1, param2, param3, ...):
@@ -117,5 +117,38 @@ start:
   say "The result is {{value}}"
 ```
 
+## Modules
 
+_introduced in CSML v1.10.0_
+
+CSML Modules are an easy way to **reuse CSML Functions across multiple chatbots** or to **provide access to your own services to other chatbot developers**. You can create functions in separate flows that you can host on a repository to ease access.
+
+A module at its core is simply a valid CSML flow, that exposes one or several functions, which can be imported into other flows without needing to copy the flow multiple times in multiple bots. An other benefit of using modules is that it makes it easier to replicate changes across multiple changes.
+
+### Usage
+
+To use a module, you must first declare it as a dependancy to your chatbot. [This is done in the modules section of the body](https://github.com/CSML-by-Clevy/csml-engine/blob/f33656660d50fef9631684a0cec84065b4da4670/csml\_server/swagger.yaml#L794-L814) when creating a new version of a chatbot or chatting with an unversioned chatbot.
+
+Some example modules are given in this repository: [https://github.com/CSML-by-Clevy/csml-modules](https://github.com/CSML-by-Clevy/csml-modules)
+
+### Example
+
+Let's import the `buttons` module into a flow to access the `YesNoButtons` function and make it easier to display Yes/No types of buttons.
+
+The module specification is as follows:
+
+_name: buttons_\
+_url:_ [_https://raw.githubusercontent.com/CSML-by-Clevy/csml-modules/master/modules/buttons.csml_](https://raw.githubusercontent.com/CSML-by-Clevy/csml-modules/master/modules/buttons.csml)__\
+_auth: none_
+
+Then you can simply import it in your CSML script as you would any other function, the only difference being the `modules/` prefix that tells CSML that it should look for this function in the `buttons` module and not in the bot's other flows.
+
+```
+import YesNoButtons from modules/buttons
+
+start:
+  say Question("Do you like strawberries?", buttons=YesNotButtons("Yes, of course", "Not really"))
+  hold
+  say "Your answer was: {{event}}"
+```
 
