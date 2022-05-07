@@ -78,6 +78,33 @@ somestep:
   goto end
 ```
 
+### hold\_secure
+
+_introduced in CSML v1.10.0_
+
+Same as `hold`, except any user input that comes after that will not be saved in any CSML memory or displayable. However, you can perform operations on the value itself. This is a good use case for secret values that should not be saved in clear text anywhere in a database:
+
+```cpp
+start:
+  say "Type something super secret, I promise I won't tell!"
+  hold_secure // indicates that the next input will be secure
+
+  // Value can not be displayed back or remembered in any way
+  say "this is a secret: {{event}}" // prevented by CSML
+  remember impossible = event // prevented by CSML
+  do impossible = event // prevented by CSML
+
+  
+  // You can however perform operations on the event,
+  // for example checking if the value is accepted
+  if (event == "password") say "This is hardly a good secret!"
+  else say "OK, good good"
+```
+
+{% hint style="warning" %}
+This keyword should be used with extreme care. It is for example a very bad practice to ask users for their password in a chat, and it should not be used for this purpose. However, this keyword can be extremely useful to share data (personal information, short-lived secrets...) that requires extra precautions or should not be stored in clear text (or at all).
+{% endhint %}
+
 ### remember
 
 Save a value to the bot's memory with the given key. It can later be retrieved (as soon as the next step) with `"{{memory_item}}"`.
@@ -132,65 +159,27 @@ forget [something, otherthing, thirdthing] // forget several memories at once
 forget * // forget EVERYTHING (dangerous!)
 ```
 
-### use..as (deprecated)
+## Root-level keywords
 
-See `as` keyword.
+{% hint style="info" %}
+These keywords can only be used at the root of the flow, outside of any step
+{% endhint %}
 
-This keyword will be deprecated in a future release.
+### const
 
-```cpp
-use 42 as answer
-
-say "The answer is {{answer}}"
-```
-
-### foreach
-
-Iterate over each element of an array.
+Declare constant values that are accessible and immutable across the whole flow. Two different flows can have a different set of `const` or different values for the same `const`!
 
 ```cpp
-do array = ["a", "b", "c"]
-foreach (val, index) in array {
-  say "at position {{index}} is element with value {{val}}"
-}
+const MY_CONST = 42
+
+start:
+  say "The value of MY_CONST is {{MY_CONST}}" // The value of MY_CONST is 42
+  do MY_CONST = 14 // Forbidden! MY_CONST is immutable
 ```
 
-### while
+### import
 
-A simple loop with a condition check at every turn
-
-```cpp
-do i = 0
-while (i < 3) {
-  say "i = {{i}}"
-  do i = i + 1
-}
-```
-
-### break, continue
-
-Exit from loops early or skip an iteration.
-
-```cpp
-remember lightsabers = [
-  {"color": "red", "owner": "Kylo Ren"},
-  {"color": "purple", "owner": "Mace Windu"},
-  {"color": "yellow", "owner": "Rey Skywalker"},
-  {"color": "green", "owner": "Yoda"},
-  {"color": "red", "owner": "Darth Vader"},
-  {"color": "green", "owner": "Luke Skywalker"},
- ]
-
-foreach (ls) in lightsabers {
-  // we want to skip any red lightsaber
-  if (ls.color == "red") continue
-  say "{{ls.owner}} had a {{ls.color}} lightsaber"
-  // we want to stop after we find the first green lightsaber
-  if (ls.color == "green") break
-}
-
-say "There might be even more lightsabers!"
-```
+see [Native CSML Functions](../native-csml-functions.md).
 
 ## Other keywords
 
@@ -232,6 +221,57 @@ if (sky == "blue") goto beach
 else goto restaurant
 ```
 
+### foreach
+
+Iterate over each element of an array.
+
+```cpp
+do array = ["a", "b", "c"]
+foreach (val, index) in array {
+  say "at position {{index}} is element with value {{val}}"
+}
+```
+
+### while
+
+A simple loop with a condition check at every turn
+
+```cpp
+do i = 0
+while (i < 3) {
+  say "i = {{i}}"
+  do i = i + 1
+}
+```
+
+### break, continue
+
+Exit from loop early, or skip an iteration
+
+```cpp
+remember lightsabers = [
+  {"color": "red", "owner": "Kylo Ren"},
+  {"color": "purple", "owner": "Mace Windu"},
+  {"color": "yellow", "owner": "Rey Skywalker"},
+  {"color": "green", "owner": "Yoda"},
+  {"color": "red", "owner": "Darth Vader"},
+  {"color": "green", "owner": "Luke Skywalker"},
+ ]
+
+foreach (ls) in lightsabers {
+  // we want to skip any red lightsaber
+  if (ls.color == "red") continue
+
+  say "{{ls.owner}} had a {{ls.color}} lightsaber"
+  // we want to stop after we find the first green lightsaber
+  if (ls.color == "green") break
+}
+
+say "There might be even more lightsabers!"
+```
+
+## Deprecated keywords
+
 ### match (deprecated)
 
 {% hint style="warning" %}
@@ -255,6 +295,22 @@ if (event match btn) { // Note: this is equivalent to event.match(btn)
   say "not good"
 }
 ```
+
+### use..as (deprecated)
+
+{% hint style="warning" %}
+This syntax is obsolete, but for backwards-compatibility reasons remains valid CSML.&#x20;
+
+See `as` keyword.
+{% endhint %}
+
+```cpp
+use 42 as answer
+
+say "The answer is {{answer}}"
+```
+
+## Operators
 
 ### Mathematical Operators
 
