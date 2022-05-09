@@ -240,7 +240,7 @@ Encode and decode URI/URIComponent (see [https://developer.mozilla.org/en-US/doc
 
 ```cpp
 say "https://mozilla.org/?x=шеллы".encode_uri()
-say "https://mozilla.org/?x=шеллы".encode_uri_component()++
+say "https://mozilla.org/?x=шеллы".encode_uri_component()
 
 say "https://mozilla.org/?x=%D1%88%D0%B5%D0%BB%D0%BB%D1%8B".decode_uri()
 say "https%3A%2F%2Fmozilla.org%2F%3Fx%3D%D1%88%D0%B5%D0%BB%D0%BB%D1%8B".decode_uri_component()
