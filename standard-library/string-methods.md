@@ -245,3 +245,12 @@ say "https://mozilla.org/?x=шеллы".encode_uri_component()++
 say "https://mozilla.org/?x=%D1%88%D0%B5%D0%BB%D0%BB%D1%8B".decode_uri()
 say "https%3A%2F%2Fmozilla.org%2F%3Fx%3D%D1%88%D0%B5%D0%BB%D0%BB%D1%8B".decode_uri_component()
 ```
+
+### .encode\_html\_entities(), .decode\_html\_entities()
+
+Encode and decode [HTML entities](https://dev.w3.org/html5/html-author/charref)
+
+```cpp
+debug "42 < 100".encode_html_entities()
+debug "42 &lt; 100".decode_html_entities()
+```
