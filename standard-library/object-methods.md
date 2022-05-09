@@ -1,6 +1,6 @@
 # Object methods
 
-### .keys()
+### .keys\(\)
 
 Return the list of all 1st-level properties in the target object.
 
@@ -12,7 +12,7 @@ do val = { "toto": 1, "tutu": 2 }
 do val.keys() // ["toto", "tutu"]
 ```
 
-### .values()
+### .values\(\)
 
 Return the list of all 1st-level-property values in the target object.
 
@@ -24,7 +24,7 @@ do val = { "toto": 1, "tutu": 2 }
 do val.values() // [1, 2]
 ```
 
-### .remove(String)
+### .remove\(String\)
 
 Remove the given property from the target object.
 
@@ -36,7 +36,7 @@ do val = { "toto": 1, "tutu": 2 }
 do val.remove("toto") // { "tutu": 2 }
 ```
 
-### .length()
+### .length\(\)
 
 Return the number of 1st-level properties in the target object.
 
@@ -48,12 +48,5 @@ do val = { "toto": 1, "tutu": 2 }
 do val.length() // 2
 ```
 
-### .assign(b)
+### 
 
-Insert all elements of the parameter object into the target object.
-
-```cpp
-do obj = {"a": 1}
-do obj.assign({"b": 2})
-say "{{obj}}" // {"a": 1, "b": 2}
-```
