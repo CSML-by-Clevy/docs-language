@@ -1,6 +1,6 @@
 # Array methods
 
-### .length\(\)
+### .length()
 
 Return the number of elements contained in the target array.
 
@@ -12,7 +12,7 @@ do val = ["Batman", "Robin", "Superman"]
 do val.length() // 3
 ```
 
-### .push\(\*\)
+### .push(\*)
 
 Add an element at the end of an array.
 
@@ -24,7 +24,7 @@ do val = ["Batman", "Superman"]
 do val.push("Robin") // ["Batman", "Superman", "Robin"]
 ```
 
-### .pop\(\)
+### .pop()
 
 Remove the last element of an array.
 
@@ -36,9 +36,32 @@ do val = ["Batman", "Robin", "Superman"]
 do val.pop() // ["Batman", "Robin"]
 ```
 
-### .insert\_at\(Integer, \*\)
+### .reverse()
 
-Add an element at position n of an array \(shifting the position of all the following elements\).
+Create a new Array with all elements reversed&#x20;
+
+```c
+do vec = [3, 2, 1]
+
+do new_vec = vec.reverse()
+say new_vec.to_string() // [1, 2, 3]
+```
+
+### .append()
+
+Add the elements of the array to the initial array
+
+```csharp
+ do vec = [1, 2, 3]
+ do vec2 = [4, 5, 6]
+
+ do append_vec = vec.append(vec2)
+ say append_vec.to_string() // [1, 2, 3, 4, 5, 6]
+```
+
+### .insert\_at(Integer, \*)
+
+Add an element at position n of an array (shifting the position of all the following elements).
 
 ```cpp
 array.insert_at(n, val) => void
@@ -48,9 +71,9 @@ do val = ["Batman", "Superman"]
 do val.insert_at(1, "Robin") // ["Batman", "Robin", "Superman"]
 ```
 
-### .remove\_at\(Integer\)
+### .remove\_at(Integer)
 
-Remove the nth element of an array \(unshifting the position of all the following elements\).
+Remove the nth element of an array (unshifting the position of all the following elements).
 
 ```cpp
 array.remove_at(n) => void
@@ -60,7 +83,7 @@ do val = ["Batman", "Robin", "Superman"]
 do val.remove_at(1) // ["Batman", "Superman"]
 ```
 
-### .find\(\*\)
+### .find(\*)
 
 Returns a new array with all the values found in the original array matching the given value.
 
@@ -76,7 +99,7 @@ do val.find("Batman") // ["Batman", "Batman"]
 
 You can find more info about the particular regex syntax used in the `*_regex` methods on [this link](https://docs.rs/regex/1.3.4/regex/#syntax).
 
-### .to\_uppercase\(\)
+### .to\_uppercase()
 
 Return the same string in all uppercase characters.
 
@@ -88,7 +111,7 @@ do val = "Where is Brian?"
 do val.to_uppercase() // "WHERE IS BRIAN?"
 ```
 
-### .to\_lowercase\(\)
+### .to\_lowercase()
 
 Return the same string in all lowercase characters.
 
@@ -100,7 +123,7 @@ do val = "Where is Brian?"
 do val.to_lowercase() // "where is brian?"
 ```
 
-### .length\(\)
+### .length()
 
 Return the length of the target string.
 
@@ -112,7 +135,7 @@ do val = "Where is Brian?"
 do val.length() // 15
 ```
 
-### .contains\(String\), .contains\_regex\(String\)
+### .contains(String), .contains\_regex(String)
 
 Return whether the string contains another string or expression.
 
@@ -130,7 +153,7 @@ do val.contains("where") // false => no, because it is case sensitive
 do val.contains_regex("[0-9]") // true
 ```
 
-### .starts\_with\(String\), .starts\_with\_regex\(String\)
+### .starts\_with(String), .starts\_with\_regex(String)
 
 Return whether a string starts with another string or expression.
 
@@ -146,7 +169,7 @@ do val.starts_with("r") // false
 do val.starts_with_regex("[A-Z]") // true
 ```
 
-### .ends\_with\(String\), .ends\_with\_regex\(String\)
+### .ends\_with(String), .ends\_with\_regex(String)
 
 Return whether a string ends with another string or expression.
 
@@ -162,7 +185,7 @@ do val.ends_with("r") // false
 do val.ends_with_regex("[A-Z]") // false
 ```
 
-### .match\(String\), .match\_regex\(String\)
+### .match(String), .match\_regex(String)
 
 Return all the matches of the string or expression in the target string, or Null if none are found.
 
@@ -181,53 +204,30 @@ do val.match_regex("[A-Z]") // ["W", "B"] => yes, and these are the letters!
 {% hint style="info" %}
 **About \_regex methods:**
 
-The `\` \(backslash\) character has a special meaning. For technical reasons, in all strings, it must be properly escaped, by convention by adding another `\` in front of itself, to avoid being interpreted as a special character. For example, if you mean to write the exact string `"\n"` you must in fact write `\\n`, otherwise `\n` will be interpreted as a line break.
+The `\` (backslash) character has a special meaning. For technical reasons, in all strings, it must be properly escaped, by convention by adding another `\` in front of itself, to avoid being interpreted as a special character. For example, if you mean to write the exact string `"\n"` you must in fact write `\\n`, otherwise `\n` will be interpreted as a line break.
 
-This Python documentation explains why it especially matters in Regex syntax to escape backslashes: [https://docs.python.org/2/howto/regex.html\#the-backslash-plague](https://docs.python.org/2/howto/regex.html#the-backslash-plague)
+This Python documentation explains why it especially matters in Regex syntax to escape backslashes: [https://docs.python.org/2/howto/regex.html#the-backslash-plague](https://docs.python.org/2/howto/regex.html#the-backslash-plague)
 
-We follow this nomenclature for CSML Regex handling, so a single Regex backslash must be written as a `"\\"` string, and an escaped backslash \(that behaves as a literal `"\"` string character\) must in fact be escaped twice, once for being in a string, and once for being in a Regex: you have to write `"\\\\"` to result in the Regex syntax `\\`which in turn matches the literal `"\"` string.
+We follow this nomenclature for CSML Regex handling, so a single Regex backslash must be written as a `"\\"` string, and an escaped backslash (that behaves as a literal `"\"` string character) must in fact be escaped twice, once for being in a string, and once for being in a Regex: you have to write `"\\\\"` to result in the Regex syntax `\\`which in turn matches the literal `"\"` string.
 
 In a future release of CSML we might introduce a "raw string" method to bypass this limitation.
 {% endhint %}
 
-### .is\_number\(\), .is\_int\(\), .is\_float\(\)
+### .init(size)
 
-Return whether the given string represents a numerical value, an int, a float.
-
-```cpp
-string.is_number() => Boolean
-
-// example
-do val = "Where is Brian?"
-do val.is_number() // false
-
-do val = "42"
-do val.is_number() // true
-do val.is_int() // true
-do val.is_float() // false
-```
-
-### .split\(String\)
-
-Split a string by a given separator and return an array containing all elements in order. The separator can be a single or multiple characters. If the separator can not be found in the string, the returned array will only contain the original string.
+Create a new array of size n
 
 ```cpp
-string.split(String) => Array[String]
-
-// example
-do val = "this is a long string"
-do val.split(" ") // ["this", "is", "a", "long", "string"]
-do val.split("is") // ["th", " ", " a long string"]
-do val.split("camembert") // ["this is a long string"]
+do arr = [].init(3) // [null, null, null]
 ```
 
-### .slice\(start, end\) =&gt; Array
+### .slice(start, end)
 
 Return a new array with all items between `start` and `end`. Some rules apply:
 
 * If `end` is not specified, all the items after `start` are returned.
 * When specified, `end` must be ≥ `start`.
-* If any of the parameters is &lt; 0, the count is made from the end of the array.
+* If any of the parameters is < 0, the count is made from the end of the array.
 
 ```cpp
 do x = ["a", "b", "c", "d", "e"].slice(2, 4)
@@ -250,7 +250,7 @@ say "{{x}}" // Error
 
 ```
 
-### .map\(fn\), .filter\(fn\), .reduce\(acc, fn\)
+### .map(fn), .filter(fn), .reduce(acc, fn)
 
 These methods are useful ways to construct a new arrays from existing arrays. They are inspired from similar methods in other languages and follow the same general syntax.
 
@@ -274,3 +274,13 @@ do sum = [1, 2, 3, 4].reduce(0, (acc, val, index) {
 }) // sum = 1 + 2 + 3 + 4 = 10
 ```
 
+### .flatten()
+
+Convert an array of arrays to an array containing all elements of the 1st level arrays.
+
+```cpp
+do [[1, 2], [3, 4]].flatten() // [1, 2, 3, 4]
+
+// if a 1st-level element is not an array, it will be kept as is
+do [[1, 2], "something", [3, 4]].flatten() // [1, 2, "something", 3, 4]
+```
