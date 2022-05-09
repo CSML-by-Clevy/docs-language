@@ -221,3 +221,27 @@ do val = "1.2345".to_float() // 1.2345
 
 do val = "not a number".to_int() // error
 ```
+
+### .to\_yml(), .to\_json()
+
+Convert yaml to json and back
+
+```cpp
+do json = "some:\n  yaml: 1".to_json()
+say "{{json}}" // {"some":{"yaml":1}}
+
+do yml = json.to_yaml()
+say "{{yml}}" // some:\n  yaml: 1
+```
+
+### .encode\_uri(), .encode\_uri\_component(), .decode\_uri(), .decode\_uri\_component()
+
+Encode and decode URI/URIComponent (see [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/encodeURI#encodeuri\_vs\_encodeuricomponent](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/encodeURI#encodeuri\_vs\_encodeuricomponent))
+
+```cpp
+say "https://mozilla.org/?x=шеллы".encode_uri()
+say "https://mozilla.org/?x=шеллы".encode_uri_component()++
+
+say "https://mozilla.org/?x=%D1%88%D0%B5%D0%BB%D0%BB%D1%8B".decode_uri()
+say "https%3A%2F%2Fmozilla.org%2F%3Fx%3D%D1%88%D0%B5%D0%BB%D0%BB%D1%8B".decode_uri_component()
+```
