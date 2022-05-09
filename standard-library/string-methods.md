@@ -221,15 +221,3 @@ do val = "1.2345".to_float() // 1.2345
 
 do val = "not a number".to_int() // error
 ```
-
-### .to\_yml(), .to\_json()
-
-Convert yaml to json and back
-
-```cpp
-do json = "some:\n  yaml: 1".to_json()
-say "{{json}}" // {"some":{"yaml":1}}
-
-do yml = json.to_yaml()
-say "{{yml}}" // some:\n  yaml: 1
-```
