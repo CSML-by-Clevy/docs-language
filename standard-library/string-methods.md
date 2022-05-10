@@ -24,40 +24,6 @@ string.to_lowercase() => String
 // example
 do val = "Where is Brian?"
 do val.to_lowercase() // "where is brian?"
-
-```
-
-### .trim()
-
-Returns a new string with both leading and trailing whitespace removed.
-
-```cpp
-do text = "   Where is Brian?   "
-do new_text = text.trim()
- 
-say new_text // "Where is Brian?"
-```
-
-### .trim\_left()
-
-Returns a new string with leading  whitespace removed.
-
-```cpp
-do text = "   Where is Brian?   "
-do new_text = text.trim_left()
- 
-say new_text // "Where is Brian?   "
-```
-
-### .trim\_right()
-
-Returns a new string with trailing whitespace removed.
-
-```cpp
-do text = "   Where is Brian?   "
-do new_text = text.trim_right()
- 
-say new_text // "   Where is Brian?"
 ```
 
 ### .capitalize()
@@ -70,6 +36,22 @@ string.capitalize() => String
 // example
 do val = "my name is John"
 do val.capitalize() // "My name is John"
+```
+
+### .trim(), .trim\_left(), .trim\_right()
+
+Returns a new string with both leading and trailing whitespace removed. `.trim_left()` and `.trim_right()` only trim the leading and trainling whitespace respectively.
+
+```cpp
+do text = "   Where is Brian?   "
+do new_text = text.trim()
+say new_text // "Where is Brian?"
+
+do new_text = text.trim_left()
+say new_text // "Where is Brian?   "
+
+do new_text = text.trim_right()
+say new_text // "   Where is Brian?"
 ```
 
 ### .length()
