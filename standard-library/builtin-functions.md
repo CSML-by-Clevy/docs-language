@@ -94,20 +94,22 @@ say UUID("v4") // "4b784011-e49b-4913-9d58-7abf4f8a56bc"
 The `Time()` helpers lets your manipulate timestamps and dates easily.
 
 ```cpp
-do time = Time() // initialize a Time object at the current UTC time
-do time = Time().at(2021, 03, 28, 12, 53, 20, 123) // initialize a time object at 2021-03-28T12:53:20.123Z
+do myTime = Time() // initialize a Time object at the current UTC time
+do myTime = Time().at(2021, 03, 28, 12, 53, 20, 123) // initialize a time object at 2021-03-28T12:53:20.123Z
 
-do time.unix() // generate the unix timestamp (in milliseconds)
+do myTime = Time().unix() // generate the unix timestamp (in milliseconds)
 
-do time.format() // returns an ISO8601 string
-do time.format("%h%d") // returns a string with a custom format
+do myTime = Time().format() // returns an ISO8601 string
+do myTime = Time().format("%h%d") // returns a string with a custom format
 
-do time.add(60) // adds 60 seconds to the value
-do time.sub(60) // subtract 60 seconds to the value
+do myTime = Time().add(60) // adds 60 seconds to the value
+do myTime = Time().sub(60) // subtract 60 seconds to the value
 
-do time = Time().parse("2021-03-28") // parse a date
-do time = Time().parse("2021-03-28T12:53:20Z") // parse an ISO-formatted string
-do time = Time().parse("01/01/2021", "%d/%m/%Y") // parse a custom-formatted string
+do myTime = Time().with_timezone("Europe/Paris") // set the time in the given timezone
+
+do myTime = Time().parse("2021-03-28") // parse a date
+do myTime = Time().parse("2021-03-28T12:53:20Z") // parse an ISO-formatted string
+do myTime = Time().parse("01/01/2021", "%d/%m/%Y") // parse a custom-formatted string
 ```
 
 {% hint style="info" %}
