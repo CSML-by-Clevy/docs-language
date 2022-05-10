@@ -84,6 +84,16 @@ do val.contains("where") // false => no, because it is case sensitive
 do val.contains_regex("[0-9]") // true
 ```
 
+### .replace(), .replace\_all(), .replace\_regex()
+
+Replace the first, all or any occurrence matching the predicate:
+
+```cpp
+say "toto".replace("o", "a") // "tato" the first o char is replaced
+say "toto".replace_all("o", "a") // "tata" all o chars are replaced
+say "toto".replace_regex("[to]", "a") // "aaaa" all chars that are t or o are replaced
+```
+
 ### .starts\_with(String), .starts\_with\_regex(String)
 
 Return whether a string starts with another string or expression.
