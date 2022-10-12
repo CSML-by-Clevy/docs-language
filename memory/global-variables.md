@@ -26,9 +26,9 @@ The `_context` can be found under `_metadata` and contains   `current_step, curr
 This memory type is injected and updated automaticaly at the start of each step&#x20;
 
 ```
-say _memadata._context.current_step
+say _metadata._context.current_step
 
-goto @$_memadata._context.default_flow
+goto @$_metadata._context.default_flow
 ```
 
 ## \_env: bot-level context
